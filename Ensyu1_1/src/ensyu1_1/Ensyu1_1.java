@@ -1,4 +1,4 @@
-package Ensyu1_1;
+package ensyu1_1;
 /*
 クラス名:ensyu1_1
 概要 :演習1-1クラス
@@ -18,7 +18,7 @@ public class Ensyu1_1 {
 	//標準出力ストリームを用いてコンソール画面に文章を表示して改行する。
 	System.out.println("初めてのJavaプログラム。");
 	//標準出力ストリームを用いてコンソール画面に文章を表示して改行する。
-	System.out.println("画面に出力しています。")
+	System.out.println("画面に出力しています。");
 	//文末の；がないため構文エラーがあります。とメッセージが表示される
 	}
 }
