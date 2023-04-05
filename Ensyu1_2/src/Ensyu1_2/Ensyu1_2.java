@@ -15,8 +15,8 @@ public class Ensyu1_2 {
 	 * 作成日:2023/04/05
 	 * */
 	public static void main (String[] args){
-//		標準出力ストリームを用いて名前を表示する
-//		ここでは「println」ではなく「\n」をもちいて改行を行っている。
+		//標準出力ストリームを用いて名前を表示する
+		//ここでは「println」ではなく「\n」をもちいて改行を行っている。
 		System.out.print("城\n所\n佑\n奈");
 	}
 }
