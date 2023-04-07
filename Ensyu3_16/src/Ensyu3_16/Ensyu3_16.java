@@ -38,39 +38,37 @@ public class Ensyu3_16 {
 		
 		//入力された整数の大小を判定する。
         //aとbを比較
-       if (IntengerA > IntengerB) {
-    	   //整数aの値を仮置きしておく
-    	   OnlynowNumber = IntengerA;
-    	   //整数aとbの値を入れ替える
-    	   IntengerA = IntengerB;
-    	   //整数bにもともとのaの値を入れる
-    	   IntengerB = OnlynowNumber;
-    	   }
-       
-       //0番目と2番目を比較
-       if (IntengerA > IntengerC) {
-    	   //整数aの値を仮置きしておく
-    	   OnlynowNumber = IntengerA;
-    	   //整数aとcの値を入れ替える
-    	   IntengerA = IntengerC;
-    	   //整数cにもともとのaの値を入れる
-    	   IntengerC = OnlynowNumber;
-    	   }
-
-       //1番目と2番目を比較
-       if (IntengerB > IntengerC) {
-    	   //整数bの値を仮置きしておく
-    	   OnlynowNumber = IntengerB;
-    	   //整数bとcの値を入れ替える
-    	   IntengerB = IntengerC;
-    	   //整数cにもともとのbの値を入れる
-    	   IntengerC =OnlynowNumber;
-		}
+		if (IntengerA > IntengerB) {
+			//整数aの値を仮置きしておく
+	    	OnlynowNumber = IntengerA;
+	    	//整数aとbの値を入れ替える
+	    	IntengerA = IntengerB;
+	    	//整数bにもともとのaの値を入れる
+	    	IntengerB = OnlynowNumber;
+	    	}
+			//0番目と2番目を比較
+		if (IntengerA > IntengerC) {
+				//整数aの値を仮置きしておく
+			OnlynowNumber = IntengerA;
+			//整数aとcの値を入れ替える
+			IntengerA = IntengerC;
+			//整数cにもともとのaの値を入れる
+			IntengerC = OnlynowNumber;
+			}
 		
-       System.out.println("昇順にソートしました。");
-       System.out.println("整数aは"+IntengerA+"です。");
-       System.out.println("整数bは"+IntengerB+"です。");
-       System.out.println("整数cは"+IntengerC+"です。");
-	
+		//1番目と2番目を比較
+		if (IntengerB > IntengerC) {
+			//整数bの値を仮置きしておく
+			OnlynowNumber = IntengerB;
+			//整数bとcの値を入れ替える
+			IntengerB = IntengerC;
+			//整数cにもともとのbの値を入れる
+			IntengerC =OnlynowNumber;
+			}
+
+		System.out.println("昇順にソートしました。");
+		System.out.println("整数aは"+IntengerA+"です。");
+		System.out.println("整数bは"+IntengerB+"です。");
+		System.out.println("整数cは"+IntengerC+"です。");	
 	}
 }
