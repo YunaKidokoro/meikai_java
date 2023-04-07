@@ -22,10 +22,10 @@ public static void main(String[] args) {
 		Scanner InputNumber = new Scanner(System.in);
 		//標準出力ストリームで「整数値：」の文とともに値の入力を促す。
 		System.out.print("整数値：");
-		//変数xに入力さえた値を読み込む。
-		int x = InputNumber.nextInt();
+		//変数VariableNumberに入力さえた値を読み込む。
+		int VariableNumber = InputNumber.nextInt();
 		//変数xに入力された値に10を加減した値をそれぞれ表示する。
-		System.out.println("10を加えた値は"+(x+10)+"です。");
-		System.out.println("10を減じた値は"+(x-10)+"です。");
+		System.out.println("10を加えた値は"+(VariableNumber+10)+"です。");
+		System.out.println("10を減じた値は"+(VariableNumber-10)+"です。");
 	}
 }
