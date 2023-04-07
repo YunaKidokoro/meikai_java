@@ -22,9 +22,9 @@ public class Ensyu2_3 {
 		Scanner InputNumber = new Scanner(System.in);
 		//標準出力ストリームを用いて「整数値：」の文を表示して入力を促す。
 		System.out.print("整数値：");
-		//変数xに入力さえた値を読み込む。
-		int x = InputNumber.nextInt();
+		//変数VariableNumberに入力さえた値を読み込む。
+		int VariableNumber = InputNumber.nextInt();
 		//入力された値を反復する文の表示。
-		System.out.print(x+"と入力しましたね。");
+		System.out.print(VariableNumber+"と入力しましたね。");
 	}
 }
