@@ -18,18 +18,18 @@ public class Ensyu2_9 {
 	 * */
 	public static void main(String[]args) {
 		//ランダムクラスのインスタンスを初期化する。
-		Random RandomNumber = new Random();
+		Random randomNumber = new Random();
 		//0.0以上1.0未満の実数をランダムに生成する。
-		Double RealNumber1 = RandomNumber.nextDouble(1.0);
+		Double realNumber1 = randomNumber.nextDouble(1.0);
 		//生成されたランダムな値を表示する。
-		System.out.println("0.0以上1.0未満の実数:"+ RealNumber1);
+		System.out.println("0.0以上1.0未満の実数:"+ realNumber1);
 		//0.0以上10.0未満の実数をランダムに生成する。
-		Double RealNumber2 = RandomNumber.nextDouble(10.0);
+		Double realNumber2 = randomNumber.nextDouble(10.0);
 		//生成されたランダムな値を表示する。
-		System.out.println("0.0以上10.0未満の実数:"+ RealNumber2);
+		System.out.println("0.0以上10.0未満の実数:"+ realNumber2);
 		//-1.0以上1.0未満の実数をランダムに生成する。
-		Double RealNumber3 = RandomNumber.nextDouble(1.0)-1.0;
+		Double realNumber3 = randomNumber.nextDouble(2.0)-1.0;
 		//生成されたランダムな値を表示する。
-		System.out.println("-1.0以上1.0未満の実数:"+ RealNumber3);
+		System.out.println("-1.0以上1.0未満の実数:"+ realNumber3);
 	}
 }
