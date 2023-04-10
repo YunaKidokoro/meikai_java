@@ -18,18 +18,18 @@ public class Ensyu2_7 {
 	* */
 	public static void main(String[]args) {
 		//ランダムクラスのインスタンスを初期化する。
-		Random RandomNumber = new Random();
-		//一桁の正の整数を表す変数RandomPlusIntengerにランダムな値を代入する。
-		int RandomPlusIntenger = RandomNumber.nextInt(10)+1;
+		Random randomNumber = new Random();
+		//一桁の正の整数を表す変数randomPlusIntengerにランダムな値を代入する。
+		int randomPlusIntenger = randomNumber.nextInt(10)+1;
 		//生成されたランダムな値を表示する。
-		System.out.println("一桁のランダムな正の整数値："+RandomPlusIntenger);
-		//一桁の負の整数を表す変数RandomMinusIntengerにランダムな値を代入する。
-		int RandomMinusIntenger = RandomNumber.nextInt(9)+1;
+		System.out.println("一桁のランダムな正の整数値："+randomPlusIntenger);
+		//一桁の負の整数を表す変数randomMinusIntengerにランダムな値を代入する。
+		int randomMinusIntenger = randomNumber.nextInt(9)+1;
 		//生成されたランダムな値を表示する。
-		System.out.println("一桁のランダムな負の整数値："+-RandomMinusIntenger);
+		System.out.println("一桁のランダムな負の整数値："+-randomMinusIntenger);
 		//二桁の正の整数を表す変数TwoDigitIntengerにランダムな値を代入する。
-		int TwoDigitIntenger = RandomNumber.nextInt(90)+10;
+		int twoDigitIntenger = randomNumber.nextInt(90)+10;
 		//生成されたランダムな値を表示する。
-		System.out.println("二桁のランダムな正の整数値:"+ TwoDigitIntenger);
+		System.out.println("二桁のランダムな正の整数値:"+ twoDigitIntenger);
 	}
 }
