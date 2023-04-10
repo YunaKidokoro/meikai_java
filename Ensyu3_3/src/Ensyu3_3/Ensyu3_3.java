@@ -18,19 +18,20 @@ public class Ensyu3_3 {
 	 * */
 	public static void main(String[]args) {
 		//変数に入力ストリームを読み込む
-		Scanner InputNumber = new Scanner (System.in);
+		Scanner inputNumber = new Scanner (System.in);
 		//1つめの整数値の入力を促す。
 		System.out.print("整数A:");
 		//整数Aに入力された値を読み込む。
-		int IntengerA = InputNumber.nextInt();
+		int intengerA = inputNumber.nextInt();
 		//2つめの整数値の入力を促す。
 		System.out.print("整数B:");
 		//整数Aに入力された値を読み込む。
-		int IntengerB = InputNumber.nextInt();
-		//BがAの約数かどうかの判定をおこなう
-		if(IntengerA%IntengerB == 0)
+		int intengerB = inputNumber.nextInt();
+		//BがAの約数の場合
+		if(intengerA % intengerB == 0)
 			//Bが約数であったことを表示する
 			System.out.println("BはAの約数です。");
+		//BがAの約数でなかった場合
 		else
 			//Bが約数でなかったことを表示する
 			System.out.println("BはAの約数ではありません。");
