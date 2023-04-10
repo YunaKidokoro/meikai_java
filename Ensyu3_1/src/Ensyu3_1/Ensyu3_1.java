@@ -23,7 +23,7 @@ public class Ensyu3_1 {
 		System.out.print("整数値:");
 		//入力された整数値を変数に読み込む。
 		int intengerValue = inputNumber.nextInt();
-		//入力された値が10以上か判定する。
+		//入力された値が0以上の場合
 		if(intengerValue>=0) 
 			//そのまま絶対値として表示する
 			System.out.println("その絶対値は"+ intengerValue +"です。");
