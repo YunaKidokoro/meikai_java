@@ -37,15 +37,15 @@ public class Ensyu3_16 {
 		int onlyNowNumber;
 		
 		//入力された整数の大小を判定する。
-        //aとbを比較
+		//aとbを比較
 		if (inputIntegerA > inputIntegerB) {
 			//整数aの値を仮置きしておく
-	    	onlyNowNumber = inputIntegerA;
-	    	//整数aとbの値を入れ替える
-	    	inputIntegerA = inputIntegerB;
-	    	//整数bにもともとのaの値を入れる
-	    	inputIntegerB = onlyNowNumber;
-	    	}
+			onlyNowNumber = inputIntegerA;
+			//整数aとbの値を入れ替える
+			inputIntegerA = inputIntegerB;
+			//整数bにもともとのaの値を入れる
+			inputIntegerB = onlyNowNumber;
+		}
 			//0番目と2番目を比較
 		if (inputIntegerA > inputIntegerC) {
 			//整数aの値を仮置きしておく
@@ -54,7 +54,7 @@ public class Ensyu3_16 {
 			inputIntegerA = inputIntegerC;
 			//整数cにもともとのaの値を入れる
 			inputIntegerC = onlyNowNumber;
-			}
+		}
 		
 		//1番目と2番目を比較
 		if (inputIntegerB > inputIntegerC) {
@@ -64,7 +64,7 @@ public class Ensyu3_16 {
 			inputIntegerB = inputIntegerC;
 			//整数cにもともとのbの値を入れる
 			inputIntegerC =onlyNowNumber;
-			}
+		}
 		
 		System.out.println("昇順にソートしました。");
 		System.out.println("整数aは"+inputIntegerA+"です。");
