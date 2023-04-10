@@ -1,5 +1,5 @@
 package ENsyu3_2;
-//キーボードからの入力を行うためにjava.util.Scanerを読み込む
+//キーボードからの入力を行うためにjava.util.Scannerをインポートする。
 import java.util.Scanner;
 /*
  * クラス名:Ensyu3_2
@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Ensyu3_2 {
 	/*
 	 * 関数名:main
-	 * 概要:整数値の正負判定とif文とif else文の比較
+	 * 概要:入力された２つの値の関係の判定
 	 * 引数:なし
 	 * 戻り値:なし
 	 * 作成者:城所佑奈
@@ -19,21 +19,21 @@ public class Ensyu3_2 {
 	public static void main(String[]args) {
 		//変数に入力ストリームを読み込む
 		Scanner inputNumber = new Scanner (System.in);
-		//整数値の入力を促す。
-		System.out.print("整数値:");
-		//変数nに入力された値を読み込む。
-		int n = inputNumber.nextInt();
-		//入力された値が0より大きいか？
-		if(n>0)
-			//入力された値が正の数と表示する。
-			System.out.println("その値は正です。");
-		//入力された値が0より小さいか？
-		else if(n<0)
-			//入力された値が負の数と表示する。
-			System.out.println("その値は負です。");
-		else if(n==0) //n>0 と n<0のどちらも満たさず、かつn==0の時に実行される
-		//else //n>0 と n<0のどちらも満たさないと実行される
-		System.out.println("その値は0です。");
-		//今回の条件はどちらも同じ意味になるため結果に影響はない
-		}
+		//1つめの整数値の入力を促す。
+		System.out.print("整数A:");
+		//整数Aに入力された値を読み込む。
+		int intengerA = inputNumber.nextInt();
+		//2つめの整数値の入力を促す。
+		System.out.print("整数B:");
+		//整数Aに入力された値を読み込む。
+		int intengerB = inputNumber.nextInt();
+		//BがAの約数の場合
+		if(intengerA % intengerB == 0)
+			//Bが約数であったことを表示する
+			System.out.println("BはAの約数です。");
+		//BがAの約数でなかった場合
+		else
+			//Bが約数でなかったことを表示する
+			System.out.println("BはAの約数ではありません。");
+	}
 }
