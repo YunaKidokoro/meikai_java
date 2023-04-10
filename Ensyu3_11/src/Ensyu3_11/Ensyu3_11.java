@@ -18,29 +18,31 @@ public class Ensyu3_11 {
 	 * */
 	public static void main(String[]ars) {
 		//変数に入力ストリームを渡す
-		Scanner InputNumber = new Scanner(System.in);
+		Scanner inputNumber = new Scanner(System.in);
 		//１つめの実数の入力を促す。
 		System.out.print("整数a:");
 		//入力された値を読み込む
-		int IntengerA = InputNumber.nextInt();
+		int intengerA = inputNumber.nextInt();
 		//2つめの実数の入力を促す。
 		System.out.print("整数b:");
 		//入力された値を読み込む。
-		int IntengerB = InputNumber.nextInt();
+		int intengerB = inputNumber.nextInt();
 		//差分を表す変数を宣言
-		int Delta; 
-		//入力された値の大小を判定
-		if(IntengerA>IntengerB)
+		int differenceValue; 
+		//整数Aのほうが大きい場合
+		if(intengerA > intengerB)
 			//整数aの方が大きいときの差を求める
-			Delta = IntengerA - IntengerB;
+			differenceValue = intengerA - intengerB;
+		//整数Bが整数A以上の場合
 		else
-			//整数bの方が大きいときの差を求める
-			Delta = IntengerB - IntengerA;
-		//その差が10以下かどうか
-		if(Delta < 10)
+			//整数Bの方が大きいときの差を求める
+			differenceValue = intengerB - intengerA;
+		//その差が10以下の場合
+		if(differenceValue <= 10)
 			//差分が10以下であることを表示する。
 			System.out.println("それらの差は10以下です。");
-		else
+		//その差が10より大きい場合
+			else
 			//差分が11以上であること表示する。
 			System.out.println("それらの差は11以上です。");
 	}
