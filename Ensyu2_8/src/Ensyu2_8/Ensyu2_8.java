@@ -20,22 +20,22 @@ public class Ensyu2_8 {
 	* */
 	public static void main(String[]args) {
 		//ランダムクラスのインスタンスを初期化する。
-		Random RandomNumber = new Random();
-		//変数InputValueを用意して、入力ストリームを渡す。
-		Scanner InputNumber = new Scanner (System.in);
+		Random randomNumber = new Random();
+		//変数inputValueを用意して、入力ストリームを渡す。
+		Scanner inputNumber = new Scanner (System.in);
 		//整数値の入力を促す
 		System.out.print("整数値:");
 		//変数xに入力さえた値を読み込む。
-		int InputValue = InputNumber.nextInt();
+		int inputValue = inputNumber.nextInt();
 		//指定したい範囲の下限と上限を表す変数をそれぞれ用意する
-		int LowerLimit, UpperLimit;
+		int lowerLimit, upperLimit;
 		//下限の値を入力した値から-5した値で初期化する。
-		LowerLimit = -InputValue -5;
+		lowerLimit = -inputValue -5;
 		//上限の値を入力した値から+5した値で初期化する。
-		UpperLimit = InputValue +5;
+		upperLimit = inputValue +5;
 		//入力した値から±5の範囲のランダムな値を生成する。
-		int RandomIntenger = RandomNumber.nextInt(UpperLimit)-LowerLimit;
+		int randomIntenger = randomNumber.nextInt(upperLimit)-lowerLimit;
 		//生成されたランダムな値を表示する。
-		System.out.println(LowerLimit + "から" + UpperLimit + "の範囲のランダムな整数:"+ RandomIntenger );
+		System.out.println(lowerLimit + "から" + upperLimit + "の範囲のランダムな整数:"+ randomIntenger );
 	}
 }
