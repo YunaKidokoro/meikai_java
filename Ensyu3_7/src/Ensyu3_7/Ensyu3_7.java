@@ -18,19 +18,19 @@ public class Ensyu3_7 {
 	 * */
 	public static void main(String[]args) {
 		//変数に入力ストリームを渡す。
-		Scanner InputNumber = new Scanner(System.in);
+		Scanner inputNumber = new Scanner(System.in);
 		//正の整数の値の入力を促す。
 		System.out.print("正の整数を入力してください：");
 		//入力された値を読み込む。
-		int PlusIntenger = InputNumber.nextInt();
+		int plusIntenger = inputNumber.nextInt();
 		//入力された値が0より大きい場合
-		if (PlusIntenger > 0)
+		if (plusIntenger > 0)
 			//正の整数で、かつ３で割りきれる場合
-			if(PlusIntenger % 3==0)
+			if(plusIntenger % 3==0)
 				//入力された値が３で割り切れることを表示する
 				System.out.println("その値は3で割り切れます。");
 			//正の整数で、かつ割り切れなくて１余る場合
-			else if(PlusIntenger % 3==1)
+			else if(plusIntenger % 3==1)
 				//入力された値が３で割り切れず１余ることを表示する
 				System.out.println("その値を3で割ったあまりは1です。");	
 			//正の整数で、かつ割り切れなくて余りが１でない場合
