@@ -18,18 +18,18 @@ public class Ensyu3_1 {
 	 * */
 	public static void main(String[] args) {
 		//変数に入力ストリームを渡す。
-		Scanner Inputnumber = new Scanner (System.in);
+		Scanner inputNumber = new Scanner (System.in);
 		//整数の入力を促す。
 		System.out.print("整数値:");
 		//入力された整数値を変数に読み込む。
-		int Intenger = Inputnumber.nextInt();
-		//入力され値が0より大きいかの判定
-		if(Intenger>=0) 
+		int intengerValue = inputNumber.nextInt();
+		//入力された値が10以上か判定する。
+		if(intengerValue>=0) 
 			//そのまま絶対値として表示する
-			System.out.println("その絶対値は"+ Intenger +"です。");
+			System.out.println("その絶対値は"+ intengerValue +"です。");
 		else
 			//Intengerを絶対値になおして表示する
-			System.out.println("その絶対値は"+ -Intenger +"です。");
+			System.out.println("その絶対値は"+ -intengerValue +"です。");
 	}
 
 }
