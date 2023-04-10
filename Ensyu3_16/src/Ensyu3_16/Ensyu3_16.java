@@ -46,7 +46,7 @@ public class Ensyu3_16 {
 			//整数bにもともとのaの値を入れる
 			inputIntegerB = onlyNowNumber;
 		}
-			//0番目と2番目を比較
+		//0番目と2番目を比較
 		if (inputIntegerA > inputIntegerC) {
 			//整数aの値を仮置きしておく
 			onlyNowNumber = inputIntegerA;
