@@ -18,11 +18,11 @@ public class Ensyu3_2 {
 	 * */
 	public static void main(String[]args) {
 		//変数に入力ストリームを読み込む
-		Scanner stdIn = new Scanner (System.in);
+		Scanner inputNumber = new Scanner (System.in);
 		//整数値の入力を促す。
 		System.out.print("整数値:");
 		//変数nに入力された値を読み込む。
-		int n = stdIn.nextInt();
+		int n = inputNumber.nextInt();
 		//入力された値が0より大きいか？
 		if(n>0)
 			//入力された値が正の数と表示する。
