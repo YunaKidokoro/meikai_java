@@ -20,25 +20,27 @@ public class Ensyu3_9 {
 	 * */
 	public static void main(String[]ars) {
 		//変数に入力ストリームを渡す
-		Scanner InputNumber = new Scanner(System.in);
+		Scanner inputNumber = new Scanner(System.in);
 		//１つめの実数の入力を促す。
 		System.out.print("整数a:");
 		//入力された値を読み込む
-		int IntengerA = InputNumber.nextInt();
+		int intengerA = inputNumber.nextInt();
 		//2つめの実数の入力を促す。
 		System.out.print("整数b:");
 		//入力された値を読み込む。
-		int IntengerB = InputNumber.nextInt();
+		int intengerB = inputNumber.nextInt();
 		//２つの実数値の大きさを比較する。
 		//2つの値は同値
-		if (IntengerA == IntengerB)
-			System.out.println("整数aと整数bは同値です。。");
+		if (intengerA == intengerB)
+			//入力された値が等しいことを表示する。
+			System.out.println("整数aと整数bは同値です。");
 		//aの方が大きい場合。
-		else if(IntengerA > IntengerB)
-			System.out.println("大きいほうの値は"+ IntengerA +"です。");
+		else if(intengerA > intengerB)
+			////大きいほうの値を表示する。
+			System.out.println("大きいほうの値は"+ intengerA +"です。");
 		//bの方が大きい場合。
 		else 
 			//大きいほうの値を表示する。
-			System.out.println("大きいほうの値は"+ IntengerB +"です。");
+			System.out.println("大きいほうの値は"+ intengerB +"です。");
 	}
 }
