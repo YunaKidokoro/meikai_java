@@ -22,21 +22,21 @@ public class Ensyu3_14 {
 		//変数aの入力を促す。
 		System.out.print("整数a:");
 		//入力された値を読み込む。
-		int IntengerA = InputNumber.nextInt();
+		int inputIntegerA = InputNumber.nextInt();
 		
 		//変数bの入力を促す。
 		System.out.print("整数b:");
 		//入力された値を読み込む。
-		int IntengerB = InputNumber.nextInt();
+		int inputIntegerB = InputNumber.nextInt();
 			
 		//整数aとbのどちらが大きいかを判定する。
-		if(IntengerA>IntengerB) {
-			System.out.println("大きいほうの値は："+IntengerA 
-					+"\n小さいほうの値は："+IntengerB);
+		if(inputIntegerA>inputIntegerB) {
+			System.out.println("大きいほうの値は："+inputIntegerA 
+					+"\n小さいほうの値は："+inputIntegerB);
 		}
-		else if(IntengerA<IntengerB) {
-			System.out.println("大きいほうの値は："+IntengerB 
-					+"\n小さいほうの値は："+IntengerA);
+		else if(inputIntegerA<inputIntegerB) {
+			System.out.println("大きいほうの値は："+inputIntegerB 
+					+"\n小さいほうの値は："+inputIntegerA);
 		}
 		else
 			System.out.println("二つの値は同じです。");
