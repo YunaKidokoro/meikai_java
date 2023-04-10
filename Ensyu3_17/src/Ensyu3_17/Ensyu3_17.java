@@ -23,12 +23,12 @@ public class Ensyu3_17 {
 		int handNumber = randomNumber.nextInt(3)+1;
 		//乱数の値で場合わけをする。
 		switch(handNumber) {
-		//乱数が１のときはグーを表示
-		case 1: System.out.println("グー"); break;
-		//乱数が２のときはチョキを表示
-		case 2: System.out.println("チョキ"); break;
-		//乱数が３のときはパーを表示
-		case 3: System.out.println("パー"); break;
+		 //乱数が１のときはグーを表示
+		 case 1: System.out.println("グー"); break;
+		 //乱数が２のときはチョキを表示
+		 case 2: System.out.println("チョキ"); break;
+		 //乱数が３のときはパーを表示
+		 case 3: System.out.println("パー"); break;
 		}
 	}
 }
