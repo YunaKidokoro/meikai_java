@@ -22,20 +22,19 @@ public class Ensyu3_4 {
 		//aの値の入力を促す。
 		System.out.print("aの値：");
 		//aの値を読み込む。
-		int IntengerA = InputNumber.nextInt();
+		double intengerA = InputNumber.nextDouble();
 		//bの値の入力を促す。
 		System.out.print("bの値：");
 		//bの値を読み込む。
-		int IntengerB = InputNumber.nextInt();
-		//aがbよりもおおきいか？
-		if (IntengerA > IntengerB)
+		double intengerB = InputNumber.nextDouble();
+		//aがbより大きい場合
+		if (intengerA > intengerB)
 			System.out.println("aのほうが大きいです。");
-		//aがbよりも小さいか？
-		else if (IntengerA < IntengerB)
+		//aがbより小さい場合
+		else if (intengerA < intengerB)
 			System.out.println("bのほうが大きいです。");
-		//aとbは同値か？
+		//aとbが等しい場合
 		else 
 			System.out.println("aとbは同じ値です。");
-		
 	}
 }
