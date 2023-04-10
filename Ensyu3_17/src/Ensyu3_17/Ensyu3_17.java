@@ -1,5 +1,5 @@
 package Ensyu3_17;
-//乱数生成のためにRomdamをインポートする
+//乱数生成のためにRomdamクラスをインポートする
 import java.util.Random;
 /*
  * クラス名:Ensyu3_17
@@ -10,7 +10,7 @@ import java.util.Random;
 public class Ensyu3_17 {
 	/*
 	 * 関数名:main
-	 * 概要:生成された乱数をもとにグー・チョキ・パーを表示する・
+	 * 概要:生成された乱数をもとにグー・チョキ・パーを表示する
 	 * 引数:なし
 	 * 戻り値:なし
 	 * 作成者:城所佑奈
@@ -18,11 +18,11 @@ public class Ensyu3_17 {
 	 * */
 	public static void main(String[]args) {
 		//ランダムクラスのインスタンスを初期化する。
-		Random RandomNumber = new Random();
+		Random randomNumber = new Random();
 		//変数HandNumberに１～３の間の乱数を読み込む	
-		int HandNumber = RandomNumber.nextInt(3)+1;
+		int handNumber = randomNumber.nextInt(3)+1;
 		//乱数の値で場合わけをする。
-		switch(HandNumber) {
+		switch(handNumber) {
 		//乱数が１のときはグーを表示
 		case 1: System.out.println("グー"); break;
 		//乱数が２のときはチョキを表示
