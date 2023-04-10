@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Ensyu2_10 {
 	/*
 	 * 関数名:main
-	 * 概要:
+	 * 概要:入力された名前を用いて挨拶文を表示
 	 * 引数:なし
 	 * 戻り値:なし
 	 * 作成者:城所佑奈
