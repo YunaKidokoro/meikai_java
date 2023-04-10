@@ -18,57 +18,57 @@ public class Ensyu3_16 {
 	 * */
 	public static void main(String[]args) {
 		//変数に入力ストリームを渡す。
-		Scanner InputNumber = new Scanner(System.in);
+		Scanner inputNumber = new Scanner(System.in);
 		//変数aの入力を促す。
 		System.out.print("整数a:");
 		//入力された値を読み込む。
-		int IntengerA = InputNumber.nextInt();
+		int inputIntegerA = inputNumber.nextInt();
 		//変数bの入力を促す。
 		System.out.print("整数b:");
 		//入力された値を読み込む。
-		int IntengerB = InputNumber.nextInt();
+		int inputIntegerB = inputNumber.nextInt();
 		//変数bの入力を促す。
 		System.out.print("整数c:");
 		//入力された値を読み込む。
-		int IntengerC = InputNumber.nextInt();
+		int inputIntegerC = inputNumber.nextInt();
 		
 
 		//値の入れ替え用の仮置き用変数を宣言する。
-		int OnlynowNumber;
+		int onlyNowNumber;
 		
 		//入力された整数の大小を判定する。
         //aとbを比較
-		if (IntengerA > IntengerB) {
+		if (inputIntegerA > inputIntegerB) {
 			//整数aの値を仮置きしておく
-	    	OnlynowNumber = IntengerA;
+	    	onlyNowNumber = inputIntegerA;
 	    	//整数aとbの値を入れ替える
-	    	IntengerA = IntengerB;
+	    	inputIntegerA = inputIntegerB;
 	    	//整数bにもともとのaの値を入れる
-	    	IntengerB = OnlynowNumber;
+	    	inputIntegerB = onlyNowNumber;
 	    	}
 			//0番目と2番目を比較
-		if (IntengerA > IntengerC) {
-				//整数aの値を仮置きしておく
-			OnlynowNumber = IntengerA;
+		if (inputIntegerA > inputIntegerC) {
+			//整数aの値を仮置きしておく
+			onlyNowNumber = inputIntegerA;
 			//整数aとcの値を入れ替える
-			IntengerA = IntengerC;
+			inputIntegerA = inputIntegerC;
 			//整数cにもともとのaの値を入れる
-			IntengerC = OnlynowNumber;
+			inputIntegerC = onlyNowNumber;
 			}
 		
 		//1番目と2番目を比較
-		if (IntengerB > IntengerC) {
+		if (inputIntegerB > inputIntegerC) {
 			//整数bの値を仮置きしておく
-			OnlynowNumber = IntengerB;
+			onlyNowNumber = inputIntegerB;
 			//整数bとcの値を入れ替える
-			IntengerB = IntengerC;
+			inputIntegerB = inputIntegerC;
 			//整数cにもともとのbの値を入れる
-			IntengerC =OnlynowNumber;
+			inputIntegerC =onlyNowNumber;
 			}
-
+		
 		System.out.println("昇順にソートしました。");
-		System.out.println("整数aは"+IntengerA+"です。");
-		System.out.println("整数bは"+IntengerB+"です。");
-		System.out.println("整数cは"+IntengerC+"です。");	
+		System.out.println("整数aは"+inputIntegerA+"です。");
+		System.out.println("整数bは"+inputIntegerB+"です。");
+		System.out.println("整数cは"+inputIntegerC+"です。");	
 	}
 }
