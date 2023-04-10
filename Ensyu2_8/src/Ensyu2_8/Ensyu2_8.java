@@ -1,7 +1,7 @@
 package Ensyu2_8;
-//ランダムな値を生成するためにjava.util.Randamをインポート
+//ランダムな値を生成するためにRandamクラスをインポート
 import java.util.Random;
-//キーボードから入力するためにjava.utill.Scannerをインポート
+//キーボードから入力するためにScannerクラスをインポート
 import java.util.Scanner;
 /*
 * クラス名:Ensyu2_8
