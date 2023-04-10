@@ -18,25 +18,25 @@ public class Ensyu3_10 {
 	 * */
 	public static void main(String[]ars) {
 		//変数に入力ストリームを渡す
-		Scanner InputNumber = new Scanner(System.in);
+		Scanner inputNumber = new Scanner(System.in);
 		//１つめの実数の入力を促す。
 		System.out.print("整数a:");
 		//入力された値を読み込む
-		int IntengerA = InputNumber.nextInt();
+		int intengerA = inputNumber.nextInt();
 		//2つめの実数の入力を促す。
 		System.out.print("整数b:");
 		//入力された値を読み込む。
-		int IntengerB = InputNumber.nextInt();
+		int intengerB = inputNumber.nextInt();
 		//差分を表す変数を宣言
-		int Delta; 
+		int differenceValue; 
 		//入力された値の大小を判定
-		if(IntengerA>IntengerB)
+		if(intengerA>intengerB)
 			//整数aの方が大きいときの差を求める
-			Delta = IntengerA - IntengerB;
+			differenceValue = intengerA - intengerB;
 		else
 			//整数bの方が大きいときの差を求める
-			Delta = IntengerB - IntengerA;
+			differenceValue = intengerB - intengerA;
 		//入力された値の差を表示する。
-		System.out.println("2つの整数の差は"+ Delta +"です。");
+		System.out.println("2つの整数の差は"+ differenceValue +"です。");
 	}
 }
