@@ -22,68 +22,68 @@ public class Ensyu3_13 {
 		//変数aの入力を促す。
 		System.out.print("整数a:");
 		//入力された値を読み込む。
-		int integerA = inputNumber.nextInt();
+		int inputIntegerA = inputNumber.nextInt();
 		
 		//変数bの入力を促す。
 		System.out.print("整数b:");
 		//入力された値を読み込む。
-		int integerB = inputNumber.nextInt();
+		int inputIntegerB = inputNumber.nextInt();
 		
 		//変数cの入力を促す。
 		System.out.print("整数c:");
 		//入力された値を読み込む。
-		int integerC = inputNumber.nextInt();
+		int inputIntegerC = inputNumber.nextInt();
 		
 		//中央値を表す変数CenterValueを宣言する。
-		int centerValue = integerA; //仮に整数aが中央値として初期化する。
+		int centerValue = inputIntegerA; //仮に整数aが中央値として初期化する。
 		
 		//入力された値は2つ以上同じ場合
 		//整数aと整数bが同じ値の場合。
-		if (integerA == integerB)
+		if (inputIntegerA == inputIntegerB)
 			//中央値に2つ以上ある値を代入
-			centerValue = integerA;
+			centerValue = inputIntegerA;
 		//整数aと整数cが同じ値の場合
-		else if(integerA == integerC)
+		else if(inputIntegerA == inputIntegerC)
 			//中央値に2つ以上ある値を代入
-			centerValue = integerC;
+			centerValue = inputIntegerC;
 		//整数bと整数cが同じ値の場合
-		else if(integerB == integerC)
+		else if(inputIntegerB == inputIntegerC)
 			//中央値に2つ以上ある値を代入
-			centerValue = integerB;
+			centerValue = inputIntegerB;
 		
 		//入力された値がすべて異なるとき。
 		//最小値を表す変数minimumValueを整数aの値で初期化する。
-		int minimumValue = integerA;
+		int minimumValue = inputIntegerA;
 		//最大値を表す変数maximumValueを整数aの値で初期化する。
-		int maximumValue = integerA;
+		int maximumValue = inputIntegerA;
 		
 		//整数bが整数aよりも大きい場合
-		if (integerB > maximumValue)		maximumValue = integerB;
+		if (inputIntegerB > maximumValue)		maximumValue = inputIntegerB;
 		else;
 		//整数cが整数aよりも大きい場合
-		if (integerC > maximumValue)		maximumValue = integerC;
+		if (inputIntegerC > maximumValue)		maximumValue = inputIntegerC;
 		else;
 		//整数bが整数aよりも小さい場合
-		if (minimumValue > integerB)		minimumValue = integerB;
+		if (minimumValue > inputIntegerB)		minimumValue = inputIntegerB;
 		else;
 		//整数cが整数aよりも小さい場合
-		if (minimumValue > integerC)		minimumValue = integerC;
+		if (minimumValue > inputIntegerC)		minimumValue = inputIntegerC;
 		else;
 		
 		//整数aが最小値でも最大値でもないなら中央値になる。
-		if(integerA != minimumValue && integerA != maximumValue)
+		if(inputIntegerA != minimumValue && inputIntegerA != maximumValue)
 			//この条件を満たす場合の中央値はＡ
-			centerValue = integerA;
+			centerValue = inputIntegerA;
 
 		//整数bが最小値でも最大値でもない場合。
-		else if(integerB != minimumValue && integerB != maximumValue)
+		else if(inputIntegerB != minimumValue && inputIntegerB != maximumValue)
 			//この条件を満たす場合の中央値はB
-			centerValue = integerB;
+			centerValue = inputIntegerB;
 
 		//整数cが最小値でも最大値でもないなら中央値になる。
-		else if(integerC != minimumValue && integerC != maximumValue)
+		else if(inputIntegerC != minimumValue && inputIntegerC != maximumValue)
 			//この条件を満たす場合の中央値はC
-			centerValue = integerC;
+			centerValue = inputIntegerC;
 		//中央値をひょうじする。
 		System.out.println("中央値は"+centerValue+"です。");
 	}
