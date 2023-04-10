@@ -22,31 +22,31 @@ public class Ensyu3_12 {
 		//変数aの入力を促す。
 		System.out.print("整数a:");
 		//入力された値を読み込む。
-		int intengerA = inputNumber.nextInt();
+		int inputIntegerA = inputNumber.nextInt();
 		//変数bの入力を促す。
 		System.out.print("整数b:");
 		//入力された値を読み込む。
-		int intengerB = inputNumber.nextInt();
+		int inputIntegerB = inputNumber.nextInt();
 		//変数cの入力を促す。
 		System.out.print("整数c:");
 		//入力された値を読み込む。
-		int intengerC = inputNumber.nextInt();
+		int inputIntegerC = inputNumber.nextInt();
 
 		//最小値を表す変数MinimumValueを整数aの値で初期化する。
-		int minimumValue = intengerA;
+		int minimumValue = inputIntegerA;
 		//minimumValueと整数bの大きさを比較する。
 		//整数ｂが仮の最小値よりも小さい場合
-		if(minimumValue > intengerB)
+		if(minimumValue > inputIntegerB)
 			//minimumValueに整数bの値を代入する。
-			minimumValue = intengerB;
+			minimumValue = inputIntegerB;
 		//整数ｂが仮の最小値よりも大きい場合
 		else;	//この場合にはなにも実行しない
 
 		//minimumValueと整数ｃの大きさを比較する。
 		//整数ｃが仮の最小値よりも小さい場合
-		if(minimumValue > intengerC)
+		if(minimumValue > inputIntegerC)
 			//minimumValueに整数ｃの値を代入する。
-			minimumValue = intengerC;
+			minimumValue = inputIntegerC;
 		//整数ｃが仮の最小値よりも大きい場合
 		else;	//この場合にはなにも実行しない
 
