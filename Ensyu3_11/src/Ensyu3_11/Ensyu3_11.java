@@ -22,21 +22,21 @@ public class Ensyu3_11 {
 		//１つめの実数の入力を促す。
 		System.out.print("整数a:");
 		//入力された値を読み込む
-		int intengerA = inputNumber.nextInt();
+		int inputIntegerA = inputNumber.nextInt();
 		//2つめの実数の入力を促す。
 		System.out.print("整数b:");
 		//入力された値を読み込む。
-		int intengerB = inputNumber.nextInt();
+		int inputIntegerB = inputNumber.nextInt();
 		//差分を表す変数を宣言
 		int differenceValue; 
 		//整数Aのほうが大きい場合
-		if(intengerA > intengerB)
+		if(inputIntegerA > inputIntegerB)
 			//整数aの方が大きいときの差を求める
-			differenceValue = intengerA - intengerB;
+			differenceValue = inputIntegerA - inputIntegerB;
 		//整数Bが整数A以上の場合
 		else
 			//整数Bの方が大きいときの差を求める
-			differenceValue = intengerB - intengerA;
+			differenceValue = inputIntegerB - inputIntegerA;
 		//その差が10以下の場合
 		if(differenceValue <= 10)
 			//差分が10以下であることを表示する。
