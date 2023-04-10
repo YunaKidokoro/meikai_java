@@ -20,15 +20,15 @@ public class Ensyu3_17 {
 		//ランダムクラスのインスタンスを初期化する。
 		Random randomNumber = new Random();
 		//変数HandNumberに１～３の間の乱数を読み込む	
-		int handNumber = randomNumber.nextInt(3)+1;
+		int handNumber = randomNumber.nextInt(2);
 		//乱数の値で場合わけをする。
 		switch(handNumber) {
-		 //乱数が１のときはグーを表示
-		 case 1: System.out.println("グー"); break;
-		 //乱数が２のときはチョキを表示
-		 case 2: System.out.println("チョキ"); break;
-		 //乱数が３のときはパーを表示
-		 case 3: System.out.println("パー"); break;
+		 //乱数が0のときはグーを表示
+		 case 0: System.out.println("グー"); break;
+		 //乱数が1のときはチョキを表示
+		 case 1: System.out.println("チョキ"); break;
+		 //乱数が2のときはパーを表示
+		 case 2: System.out.println("パー"); break;
 		}
 	}
 }
