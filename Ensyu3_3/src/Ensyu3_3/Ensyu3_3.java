@@ -23,11 +23,11 @@ public class Ensyu3_3 {
 		System.out.print("整数値:");
 		//変数nに入力された値を読み込む。
 		int n = inputNumber.nextInt();
-		//入力された値が0より大きいか？
+		//入力された値が0より大きい場合
 		if(n>0)
 			//入力された値が正の数と表示する。
 			System.out.println("その値は正です。");
-		//入力された値が0より小さいか？
+		//入力された値が0より小さい場合
 		else if(n<0)
 			//入力された値が負の数と表示する。
 			System.out.println("その値は負です。");
