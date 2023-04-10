@@ -22,23 +22,28 @@ public class Ensyu3_15 {
 		//変数aの入力を促す。
 		System.out.print("整数a:");
 		//入力された値を読み込む。
-		int inputintegerA = inputNumber.nextInt();
+		int inputIntegerA = inputNumber.nextInt();
 		
 		//変数bの入力を促す。
 		System.out.print("整数b:");
 		//入力された値を読み込む。
-		int inputintegerB = inputNumber.nextInt();
+		int inputIntegerB = inputNumber.nextInt();
 		
 		//入力された整数の大小を判定する。
-		if(inputintegerA < inputintegerB) {
-			//値の入れ替え用の仮置き用変数を宣言する。
-			int onlyNowNumber = inputintegerA;
-			inputintegerA = inputintegerB;
-			inputintegerB = onlyNowNumber;
+		if(inputIntegerA < inputIntegerB) {
+			//値の入れ替え用の仮置き用変数を宣言し、整数aの値で初期化する。
+			int onlyNowNumber = inputIntegerA;
+			//整数aに整数bの値を代入
+			inputIntegerA = inputIntegerB;
+			//整数bにもともとの整数aの値を代入する
+			inputIntegerB = onlyNowNumber;
 		}
+		//このプログラムが整数を降順にソートしたことを表示
 		System.out.println("降順にソートしました。");
-		System.out.println("整数aは"+inputintegerA+"です。");
-		System.out.println("整数bは"+inputintegerB+"です。");
+		//より大きい方の値を表示
+		System.out.println("整数aは"+inputIntegerA+"です。");
+		//小さい方の値を表示
+		System.out.println("整数bは"+inputIntegerB+"です。");
 	}
 }
 
