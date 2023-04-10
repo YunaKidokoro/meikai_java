@@ -5,7 +5,7 @@ import java.util.Random;
  * クラス名:Ensyu2_7
  * 概要:演習2-7
  * 作成者:城所佑奈
- * 作成日:2023/04/05
+ * 作成日:2023/04/10
  * */
 public class Ensyu2_7 {
 	/*
@@ -14,7 +14,7 @@ public class Ensyu2_7 {
 	* 引数:なし
 	* 戻り値:なし
 	* 作成者:城所佑奈
-	* 作成日:2023/04/05
+	* 作成日:2023/04/10
 	* */
 	public static void main(String[]args) {
 		//ランダムクラスのインスタンスを初期化する。
