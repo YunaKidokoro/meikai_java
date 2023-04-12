@@ -44,5 +44,4 @@ public class Ensyu4_4 {
 		//while文終了後のｘの値を確認する。
 		System.out.print("x=" + x);
 	}
-
 }
