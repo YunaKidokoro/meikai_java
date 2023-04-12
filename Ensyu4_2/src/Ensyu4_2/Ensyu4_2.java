@@ -20,35 +20,35 @@ public class Ensyu4_2 {
 	 * */
 	public static void main (String[]args) {
 		//Randomクラスのインスタンスを初期化する。
-		Random RandomNumber = new Random();
+		Random randomNumber = new Random();
 		//Scannerクラスのインスタンスを初期化する。
-		Scanner InputNumber = new Scanner(System.in);
+		Scanner inputNumber = new Scanner(System.in);
 		
 		//当てるべき数を10~99の乱数として生成。
-		int CorrectNumber = RandomNumber.nextInt(89)+10;
+		int correctNumber = randomNumber.nextInt(89)+10;
 		//数当てゲームの開始メッセージを表示
 		System.out.println("数当てゲーム開始！");
 		//ゲームのルールを説明する。
 		System.out.println("10~99の数を当ててください。");
 		//プレイヤーの入力する値を読み込む変数を宣言
-		int PlayerChoice ; 
+		int playerChoice ; 
 		//ループの開始
 		do {
 		//入力を促すメッセージを表示
 			System.out.print("いくつかな？：");
 		//入力された値を変数に読み込む
-			PlayerChoice = InputNumber.nextInt();
+			playerChoice = inputNumber.nextInt();
 		//あたりの数字と入力を比較する
 		//入力された値の方が大きいとき
-			if(PlayerChoice > CorrectNumber)
+			if(playerChoice > correctNumber)
 				//入力された値が大きいことを表示
 				System.out.println("もっと小さいよ！");
 		//入力された値の方が小さいとき
-			else if(PlayerChoice < CorrectNumber)
+			else if(playerChoice < correctNumber)
 				//入力された値が小さいことを表示
 				System.out.println("もっと大きいよ！");				
 		//不正解であれば繰り返す。
-		}while(PlayerChoice != CorrectNumber);
+		}while(playerChoice != correctNumber);
 		//正解であれば正解メッセージを表示する。
 		System.out.println("正解です！");
 		
