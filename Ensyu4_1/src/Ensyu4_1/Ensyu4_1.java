@@ -20,7 +20,7 @@ public class Ensyu4_1 {
 		//スキャナークラスのインスタンスを初期化する
 		Scanner stdIn = new Scanner(System.in);
 		//繰り返すかを判断するための変数を宣言
-		int retryValue;
+		int retryValue = 0;
 		//ループの開始
 		do {
 			//整数の入力を促す文を表示する
@@ -41,7 +41,9 @@ public class Ensyu4_1 {
 				System.out.println("その値は0です。");
 			//もう一度行うかの確認文の表示
 			System.out.print("もう一度？ 1...Yes/1以外の数字...No:");
+			//入力された値を読み込む
 			retryValue = stdIn.nextInt();
+		//1が入力された場合は繰り返す
 		}while(retryValue ==1);
 		//終了したことを表示
 		System.out.print("終了");
