@@ -30,7 +30,7 @@ public class Ensyu4_12 {
 			System.out.print("正の整数値：");
 			//変数inputValueに入力された値を読み込む。
 			inputValue = inputNumber.nextInt();
-		//inputValueの値が負の数なら繰り返す。
+		//inputValueの値が0以下なら繰り返す。
 		}while(inputValue <= 0);
 		
 		
