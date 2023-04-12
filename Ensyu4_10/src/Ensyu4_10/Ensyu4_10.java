@@ -21,7 +21,7 @@ public class Ensyu4_10 {
 		Scanner inputNumber = new Scanner(System.in);
 		
 		//入力された値を読み込む変数を宣言
-		int starValue   = 0;
+		int starValue  = 0;
 		//ループの回数を数える変数を用意する
 		int firstCount = 0 ;
 		//ループの開始
@@ -38,8 +38,8 @@ public class Ensyu4_10 {
 			System.out.print("何個*を表示しますか：");
 			//入力された値を読み込む
 			starValue = inputNumber.nextInt(); 
-		//入力された値が負の場合は繰り返し入力を求める
-		}while(starValue < 0);	
+		//入力された値が0以下の場合は繰り返し入力を求める
+		}while(starValue <= 0);	
 		
 		//カウント数が0から入力された値になるまでループする
 		for(int secondCount=0; secondCount<starValue ;secondCount++ ) {
