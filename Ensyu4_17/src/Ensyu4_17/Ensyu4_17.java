@@ -21,7 +21,7 @@ public class Ensyu4_17 {
 		Scanner inputNumber = new Scanner(System.in);
 		
 		//入力された値を読み込む変数を宣言
-		int inputValue;
+		int inputValue = 0;
 		//ループの回数を数える変数を用意する
 		int firstCount = 0 ;
 		//ループの開始
@@ -54,8 +54,6 @@ public class Ensyu4_17 {
 			}
 		}
 		//約数の個数を表示する
-		System.out.println("約数は"+ divisorValue +"個です。");
-		
+		System.out.println("約数は"+ divisorValue +"個です。");	
 	}
-
 }
