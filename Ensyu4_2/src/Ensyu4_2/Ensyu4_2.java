@@ -34,16 +34,16 @@ public class Ensyu4_2 {
 		int playerChoice = 0; 
 		//ループの開始
 		do {
-		//入力を促すメッセージを表示
+			//入力を促すメッセージを表示
 			System.out.print("いくつかな？：");
-		//入力された値を変数に読み込む
+			//入力された値を変数に読み込む
 			playerChoice = inputNumber.nextInt();
-		//あたりの数字と入力を比較する
-		//入力された値の方が大きいとき
+			//あたりの数字と入力を比較する
+			//入力された値の方が大きいとき
 			if(playerChoice > correctNumber)
 				//入力された値が大きいことを表示
 				System.out.println("もっと小さいよ！");
-		//入力された値の方が小さいとき
+			//入力された値の方が小さいとき
 			else if(playerChoice < correctNumber)
 				//入力された値が小さいことを表示
 				System.out.println("もっと大きいよ！");				
@@ -51,6 +51,5 @@ public class Ensyu4_2 {
 		}while(playerChoice != correctNumber);
 		//正解であれば正解メッセージを表示する。
 		System.out.println("正解です！");
-		
 	}
 }
