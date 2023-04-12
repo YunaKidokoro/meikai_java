@@ -32,13 +32,13 @@ public class Ensyu4_3 {
 		if(inputIntegerA > inputIntegerB) {
 		//整数Aの方が大きいとき
 		//整数Aの値を仮置きする変数宣言
-			int OnlyNowNumber;
+			int onlyNowNumber;
 			//整数Aの値を仮置き。
-			OnlyNowNumber = inputIntegerA;
+			onlyNowNumber = inputIntegerA;
 			//整数AにBの値を入れ替える。
 			inputIntegerA = inputIntegerB;
 			//整数Bに元の整数Aの値を入れる。
-			inputIntegerB = OnlyNowNumber;
+			inputIntegerB = onlyNowNumber;
 		}
 		else;	
 			
