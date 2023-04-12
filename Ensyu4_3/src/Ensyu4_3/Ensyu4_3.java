@@ -30,8 +30,8 @@ public class Ensyu4_3 {
 		int inputIntegerB = inputNumber.nextInt();
 		//整数の大きさを比較する
 		if(inputIntegerA > inputIntegerB) {
-		//整数Aの方が大きいとき
-		//整数Aの値を仮置きする変数宣言
+			//整数Aの方が大きいとき
+			//整数Aの値を仮置きする変数宣言
 			int onlyNowNumber = 0 ;
 			//整数Aの値を仮置き。
 			onlyNowNumber = inputIntegerA;
@@ -46,7 +46,7 @@ public class Ensyu4_3 {
 			System.out.print(inputIntegerA+" ");
 			//整数Aの値に次の整数の値を代入
 			inputIntegerA = inputIntegerA+1;
-			//整数Aの大きさがBと一致するまでループする。
+		//整数Aの大きさがBと一致するまでループする。
 		}while(inputIntegerA != inputIntegerB+1 );
 	}
 }
