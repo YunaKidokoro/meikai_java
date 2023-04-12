@@ -23,7 +23,7 @@ public class Ensyu4_12 {
 		//カウントアップを行うことを表示
 		System.out.println("カウントアップします。");
 		//入力された値を読み込むための変数を宣言する。
-		int inputValue;
+		int inputValue = 0;
 		//ループを開始
 		do {	
 			//正の整数値の入力を促す文を表示する
