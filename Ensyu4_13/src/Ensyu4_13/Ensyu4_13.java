@@ -21,7 +21,7 @@ public class Ensyu4_13 {
 		Scanner inputNumber = new Scanner(System.in);
 		
 		//入力された値を読み込む変数を宣言
-		int inputValue;
+		int inputValue = 0;
 		//ループの開始
 		do {
 			//ループの回数を数える変数を用意する
@@ -42,8 +42,9 @@ public class Ensyu4_13 {
 		
 		//１から入力値までの合計を表す変数を宣言する
 		int sumValue = 0;
-		
+		//カウント数が0から入力値になるまでループ
 		for(int countNumber=0; countNumber<=inputValue ;countNumber++) {
+			//それまでの合計値に値を加算する
 			sumValue += countNumber;
 		} 
 		//求めた積の値を表示する
