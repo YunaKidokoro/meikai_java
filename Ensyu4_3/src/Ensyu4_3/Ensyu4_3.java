@@ -39,8 +39,7 @@ public class Ensyu4_3 {
 			inputIntegerA = inputIntegerB;
 			//整数Bに元の整数Aの値を入れる。
 			inputIntegerB = onlyNowNumber;
-		}
-			
+		}	
 		//ループを開始
 		do {	
 			//整数Aの値に数を加えつつ表示
