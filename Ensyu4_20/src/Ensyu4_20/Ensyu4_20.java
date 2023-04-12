@@ -21,7 +21,7 @@ public class Ensyu4_20 {
 		Scanner inputNumber = new Scanner(System.in);
 		
 		//入力された値を読み込む変数を宣言
-		double inputValue;
+		double inputValue = 0;
 		//ループの回数を数える変数を用意する
 		int firstCount = 0;
 		//ループの開始
@@ -50,9 +50,8 @@ public class Ensyu4_20 {
 				//*を表示する
 				System.out.print("*");
 			}
-		//改行を入れて、また列ループをさせる
+			//改行を入れて、またループをさせる
 			System.out.println();
 		}
 	}
-
 }
