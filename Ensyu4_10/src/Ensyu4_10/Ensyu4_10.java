@@ -21,32 +21,32 @@ public class Ensyu4_10 {
 		Scanner inputNumber = new Scanner(System.in);
 		
 		//入力された値を読み込む変数を宣言
-		int starValue;
+		int starValue   = 0;
 		//ループの回数を数える変数を用意する
-		int countNumber = 0 ;
+		int firstCount = 0 ;
 		//ループの開始
 		do {
 			//ループ回数が１以上の場合
-			if(countNumber >= 1) {
+			if(firstCount >= 1) {
 				//入力を促す文を表示する
 				System.out.println("正の整数値を入力してください。");
 			}
 			//カウント数を増やす
-			countNumber++;
+			firstCount++;
 			
 			//＊の数の入力を促す文を表示
 			System.out.print("何個*を表示しますか：");
 			//入力された値を読み込む
 			starValue = inputNumber.nextInt(); 
-			
-		}while(starValue < 0);	//入力された値が負の場合は繰り返し入力を求める。
+		//入力された値が負の場合は繰り返し入力を求める
+		}while(starValue < 0);	
 		
-		for(int i=0; i<starValue ;i++ ) {
+		//カウント数が0から入力された値になるまでループする
+		for(int secondCount=0; secondCount<starValue ;secondCount++ ) {
+			//*を表示する
 			System.out.print("*");			
 		}
 		//最後の＊が入力されたら改行を行う
-		System.out.println();
-		
+		System.out.println();	
 	}
-
 }
