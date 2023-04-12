@@ -22,7 +22,9 @@ public class Ensyu4_15 {
 
 		//入力された値を読み込む変数を宣言
 		//左から順に身長の開始値、身長の終了値、増分を表す
-		int inputLowLimit, inputHighLimit, increaseValue;
+		int inputLowLimit = 0;
+		int inputHighLimit= 0;
+		int increaseValue = 0;
 		//一つ目のループの回数を数える変数を用意する
 		int countLoop1 = 0 ;
 		//ループの開始
@@ -55,17 +57,14 @@ public class Ensyu4_15 {
 		//身長の開始値と終了値が逆に入力された場合
 		if(inputLowLimit > inputHighLimit) {
 			//2つの値を入れ替えるための仮置き用の変数を用意
-			int onlyNowValue;
+			int onlyNowValue = 0;
 			onlyNowValue   = inputLowLimit;
 			inputLowLimit  = inputHighLimit;
 			inputHighLimit = onlyNowValue;
 		}
-		//入力に問題がない場合には何もしない
-		else;
-		
+
 		//対応表のラベルを表示する
 		System.out.println("身長		標準体重");
-		
 		
 		//表の行数
 		int lineValue = 1 + (inputHighLimit - inputLowLimit)/increaseValue;
