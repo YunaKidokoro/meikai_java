@@ -50,10 +50,8 @@ public class Ensyu4_26 {
 			if(secondInput < 0) {
 				//負の値は加算しないことを表示
 				System.out.println("負の数は加算しません。");
-				//加算される負の数分、値を加算しておく
-				sumValue -= secondInput;
-				//負の数の個数は平均を求める際に除外する
-				loopCount--;
+				//残りの部分の処理を飛ばしてループの最初に戻る
+				continue;
 			}
 			//これまでの合計値に入力された値を加算する。
 			sumValue += secondInput;
