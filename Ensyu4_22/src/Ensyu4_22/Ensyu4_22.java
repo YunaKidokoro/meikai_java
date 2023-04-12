@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Ensyu4_22 {
 	/*
 	 * 関数:main
-	 * 概要:入力された段数の数字ピラミッドを表示する
+	 * 概要:*でn段のピラミッドを表示する
 	 * 引数:なし
 	 * 戻り値:なし
 	 * 作成者:城所佑奈
@@ -55,10 +55,8 @@ public class Ensyu4_22 {
 			}
 			//数字のカウント数を0から(段数×２-1)に増加するまでループ
 			for(double starCount=0 ; starCount<lineCount*2-1 ; starCount++) {
-				//表示する数字の値を計算する
-				int outputInteger = lineCount%10;
 				//数字を表示する
-				System.out.print(outputInteger);
+				System.out.print("*");
 			}
 			//改行を入れて、また列ループをさせる
 			System.out.println();
