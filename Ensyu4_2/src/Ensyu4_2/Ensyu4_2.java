@@ -31,7 +31,7 @@ public class Ensyu4_2 {
 		//ゲームのルールを説明する。
 		System.out.println("10~99の数を当ててください。");
 		//プレイヤーの入力する値を読み込む変数を宣言
-		int playerChoice ; 
+		int playerChoice = 0; 
 		//ループの開始
 		do {
 		//入力を促すメッセージを表示
