@@ -34,8 +34,8 @@ public class Ensyu4_22 {
 			//カウント数を増やす
 			firstCount++;
 
-			//数字ピラミッドを表示することを伝える文を表示
-			System.out.println("数字ピラミッドを表示します。");
+			//ピラミッドを表示することを伝える文を表示
+			System.out.println("n段のピラミッドを表示します。");
 			//整数値の入力を促す文を表示
 			System.out.print("nの値：");
 			//入力された値を読み込む
