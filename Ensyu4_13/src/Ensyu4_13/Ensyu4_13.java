@@ -22,23 +22,23 @@ public class Ensyu4_13 {
 		
 		//入力された値を読み込む変数を宣言
 		int inputValue = 0;
+		//ループの回数を数える変数を用意する
+		int firstCount = 0 ;
 		//ループの開始
 		do {
-			//ループの回数を数える変数を用意する
-			int countNumber = 0 ;
 			//ループ回数が１以上の場合
-			if(countNumber >= 1) {
+			if(firstCount >= 1) {
 				//入力を促す文を表示する
 				System.out.println("正の整数値を入力してください。");
 			}
 			//カウント数を増やす
-			countNumber++;
+			firstCount++;
 			//整数の入力を促す文を表示
 			System.out.print("整数値：");
 			//入力された値を読み込む
 			inputValue = inputNumber.nextInt(); 
 		//入力された値が負の場合は繰り返し入力を求める。
-		}while(inputValue < 0);
+		}while(inputValue <= 0);
 		
 		//１から入力値までの合計を表す変数を宣言する
 		int sumValue = 0;
