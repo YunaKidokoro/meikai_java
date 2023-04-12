@@ -58,8 +58,11 @@ public class Ensyu4_15 {
 		if(inputLowLimit > inputHighLimit) {
 			//2つの値を入れ替えるための仮置き用の変数を用意
 			int onlyNowValue = 0;
+			//仮置き用の変数に小さいほうの身長を代入
 			onlyNowValue   = inputLowLimit;
+			//小さいほうの身長に大きいほうの身長を代入
 			inputLowLimit  = inputHighLimit;
+			//大きいほうの身長にもともとの小さいほうの身長の値を代入
 			inputHighLimit = onlyNowValue;
 		}
 
