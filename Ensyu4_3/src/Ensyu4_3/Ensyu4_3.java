@@ -40,7 +40,6 @@ public class Ensyu4_3 {
 			//整数Bに元の整数Aの値を入れる。
 			inputIntegerB = onlyNowNumber;
 		}
-		else;	
 			
 		//ループを開始
 		do {	
@@ -51,5 +50,4 @@ public class Ensyu4_3 {
 			//整数Aの大きさがBと一致するまでループする。
 		}while(inputIntegerA != inputIntegerB+1 );
 	}
-
 }
