@@ -21,7 +21,7 @@ public class Ensyu4_19 {
 		Scanner inputNumber = new Scanner(System.in);
 		
 		//入力された値を読み込む変数と、do文の繰り返しを決める変数を宣言
-		int monthNumber, retryValue;
+		int monthNumber = 0;		int retryValue  = 0;
 		//季節の表示するループの開始
 		do {
 			//適切な入力がされるまで繰り返すループの開始
@@ -54,7 +54,7 @@ public class Ensyu4_19 {
 				System.out.println("それは冬です");
 			}
 			//もう一度行うか尋ねる文を表示
-			System.out.print("もう一度？ 1...Yes/ 0...No:");
+			System.out.print("もう一度？ 1...Yes/ 1以外の数字...No:");
 			//入力された値をdo文の繰り返しを決める変数に読み込む
 			retryValue  = inputNumber.nextInt();
 		//もう一度が選択されたらループを行う
