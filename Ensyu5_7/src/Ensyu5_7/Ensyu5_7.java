@@ -26,11 +26,11 @@ public class Ensyu5_7 {
 			
 			//0.0から1.0まで0.001単位で増やす、繰り返しの度に1000で割る
 			sumValue = (float)countNumber/1000;
-			//値を表示す
+			//値を表示する
 			System.out.printf("%10f",sumValue);
 			//二乗を求める
 			squareValue = sumValue * sumValue;
-			//二乗の値を表示す
+			//二乗の値を表示する
 			System.out.printf("%10f",squareValue);
 			//改行をする
 			System.out.println();
