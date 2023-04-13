@@ -21,7 +21,7 @@ public class Ensyu4_7 {
 		Scanner inputNumber = new Scanner(System.in);
 		
 		//入力された値を読み込む変数を宣言
-		int symbolValue;
+		int symbolValue=0;
 		//ループの回数を数える変数を用意する
 		int countNumber = 0 ;
 		//ループの開始
@@ -38,8 +38,8 @@ public class Ensyu4_7 {
 			System.out.print("何個記号を表示しますか：");
 			//入力された値を読み込む
 			symbolValue = inputNumber.nextInt(); 
-			
-		}while(symbolValue < 0);	//入力された値が負の場合は繰り返し入力を求める。
+		//入力された値が負の場合は繰り返し入力を求める。
+		}while(symbolValue <= 0);	
 		
 		//次のループ回数を数えるために変数の値を0に戻す
 		countNumber = 1;
