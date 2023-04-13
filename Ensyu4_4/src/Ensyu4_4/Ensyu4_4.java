@@ -32,7 +32,8 @@ public class Ensyu4_4 {
 			System.out.print("正の整数値：");
 			//変数ｘに入力された値を読み込む。
 			x = inputNumber.nextInt();
-		}while(x <= 0); //xの値が負の数なら繰り返す。
+		//xの値が負の数なら繰り返す。
+		}while(x <= 0);
 		
 		//xの値が0になるまで繰り返すループを開始
 		while (x >= 0) {
