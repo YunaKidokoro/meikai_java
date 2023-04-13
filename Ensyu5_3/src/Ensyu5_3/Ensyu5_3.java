@@ -20,7 +20,7 @@ public class Ensyu5_3 {
 		//Scannerクラスのインスタンスを初期化する。
 		Scanner inputNumber = new Scanner(System.in);
 		//論理型の変数を宣言する
-		boolean bool = false;
+		boolean logicValue = false;
 		//入力された値の大小比較をする
 		System.out.println("入力された整数の大きさを比較します。");
 		
@@ -50,8 +50,8 @@ public class Ensyu5_3 {
 		}while(firstInteger%1 !=0 || secondInteger%1 !=0);
 		
 		//論理型変数の条件を整数aの方が小さいときに正となる、と決める
-		bool = firstInteger < secondInteger;
+		logicValue = firstInteger < secondInteger;
 		//判定結果の表示をする
-		System.out.println("a < b = " + bool);
+		System.out.println("a < b = " + logicValue);
 	}
 }
