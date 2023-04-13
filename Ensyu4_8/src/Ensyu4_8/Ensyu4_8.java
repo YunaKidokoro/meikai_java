@@ -21,7 +21,7 @@ public class Ensyu4_8 {
 		Scanner inputNumber = new Scanner(System.in);
 		
 		//入力された値を読み込む変数を宣言
-		int inputValue;
+		int inputValue=0;
 		//ループの回数を数える変数を用意する
 		int countNumber = 0 ;
 		//ループの開始
@@ -39,7 +39,7 @@ public class Ensyu4_8 {
 			//入力された値を読み込む
 			inputValue = inputNumber.nextInt(); 
 			
-		}while(inputValue < 0);	//入力された値が負の場合は繰り返し入力を求める。
+		}while(inputValue <= 0);	//入力された値が負の場合は繰り返し入力を求める。
 		
 		//次のループ回数を数えるために変数の値を0に戻す
 		countNumber = 0;
