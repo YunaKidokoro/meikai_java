@@ -24,37 +24,29 @@ public class Ensyu5_4 {
 		System.out.println("入力された値の合計と平均を求めます。");
 		
 		//入力された値を読み込むための変数の宣言
-		double firstInteger = 0, secondInteger = 0, thirdInteger =0;
+		int firstInteger = 0, secondInteger = 0, thirdInteger =0;
 		//ループ回数を数える変数を宣言
 		int countValue = 0;
 		
-		//ループの開始
-		do {
-			//2回目以降のループの場合
-			if(countValue!=0) {
-				//再入力を求める表示を行う
-				System.out.println("もう一度入力してください。");
-			}
-			//値の入力を求める
-			System.out.print("整数a:");
-			//入力された値を読み込む
-			firstInteger  = inputNumber.nextDouble();
-			//値の入力を求める
-			System.out.print("整数b:");
-			//入力された値を読み込む
-			secondInteger = inputNumber.nextDouble();
-			//値の入力を求める
-			System.out.print("整数c:");
-			//入力された値を読み込む
-			thirdInteger = inputNumber.nextDouble();
-			//ループ回数を数える
-			countValue++;
-		//小数点以下を含むのであればもう一度入力させる
-		}while(firstInteger%1 !=0 || secondInteger%1 !=0 || thirdInteger%1 !=0 );
+		
+		//値の入力を求める
+		System.out.print("整数a:");
+		//入力された値を読み込む
+		firstInteger  = inputNumber.nextInt();
+		//値の入力を求める
+		System.out.print("整数b:");
+		//入力された値を読み込む
+		secondInteger = inputNumber.nextInt();
+		//値の入力を求める
+		System.out.print("整数c:");
+		//入力された値を読み込む
+		thirdInteger = inputNumber.nextInt();
+		//ループ回数を数える
+		countValue++;
 		
 		//合計を計算する
-		double totalValue   = firstInteger + secondInteger + thirdInteger;
-		//平均を計算する
+		int totalValue   = firstInteger + secondInteger + thirdInteger;
+		//平均を計算する、int型をdouble型で割ってるので、平均はdouble型になる
 		double averageValue = totalValue/3.0;
 		
 		//合計と平均を表示をする
