@@ -21,7 +21,7 @@ public class Ensyu4_9 {
 		Scanner inputNumber = new Scanner(System.in);
 		
 		//入力された値を読み込む変数を宣言
-		int inputValue;
+		int inputValue  = 0;
 		//ループの回数を数える変数を用意する
 		int countNumber = 0 ;
 		//ループの開始
@@ -37,8 +37,8 @@ public class Ensyu4_9 {
 			System.out.print("整数値：");
 			//入力された値を読み込む
 			inputValue = inputNumber.nextInt(); 
-			
-		}while(inputValue < 0);	//入力された値が負の場合は繰り返し入力を求める。
+		//入力された値が負の場合は繰り返し入力を求める。
+		}while(inputValue <=0);
 		
 		//積の値を表す変数を宣言する
 		int multiplyValue = 1;
