@@ -19,9 +19,9 @@ public class Ensyu6_2 {
 		double []variableArray = new double[5];
 		//インデックスの要素に値を代入していく
 		//カウント数が要素数から1になるまでループする
-		for(int countNumber=variableArray.length; countNumber>0; countNumber--) {
+		for(int countNumber=0; countNumber<variableArray.length; countNumber++) {
 			//順に値を代入していく
-			variableArray[countNumber - 1] = countNumber;
+			variableArray[countNumber] = variableArray.length - countNumber;
 		}
 		
 		//全要素の値を表示する
