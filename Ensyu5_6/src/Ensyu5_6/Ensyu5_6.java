@@ -15,27 +15,26 @@ public class Ensyu5_6 {
 	 * 作成日:2023/04/13
 	 * */
 	public static void main(String[]args) {
-		//float型で0から順に加算していく値を格納する変数を宣言する
+		//0.001ずつ順に大きくなっていく値を代入していくための変数
 		float firstSum = 0.0F, secondSum = 0.0F;
 		
 		//表のラベルを表示する
-		System.out.printf("%10s%11s", "float","int");
+		System.out.printf("%10s%10s\n", "float","int");
 		//表の罫線を表示する
-		System.out.println("\n-------------------------");
+		System.out.println("-------------------------");
 		//カウント数を表す変数を宣言、この値を用いて順に計算をおこなう
-		int count =0;
+		int countValue =0;
 		//繰り返しをfloatで制御しながら0.0から1.0まで0.001単位で増やす
 		for (firstSum=0.0F; firstSum<=1.0F; firstSum+=0.001F) {
-			//for文の刻み幅がフロート型で0.001になっていて、
-			//この求めかたでの値を表示
+			//for文での刻み幅を0.001(float型)にして値を表示していく
 			System.out.printf("%10f",firstSum);
 			
-			//0.0から1.0まで0.001単位で増やす、繰り返しの度に1000で割る
-			secondSum = (float)count/1000;
-			//この求め方での値を表示す
+			//0.0から1.0まで0.001単位で増やすのを繰り返しの度に1000で割る
+			secondSum = (float)countValue/1000;
+			//この求め方での値を表示する
 			System.out.printf("%10f",secondSum);
 			//カウント数を増やす
-			count++;
+			countValue++;
 			//改行をいれる
 			System.out.println();
 		}
