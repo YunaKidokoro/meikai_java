@@ -38,8 +38,8 @@ public class Ensyu4_6_2{
 			System.out.print("何個*を表示しますか：");
 			//入力された値を読み込む
 			starValue = inputNumber.nextInt(); 
-			
-		}while(starValue < 0);	//入力された値が負の場合は繰り返し入力を求める。
+		//入力された値が負の場合は繰り返し入力を求める。
+		}while(starValue < 0);
 		
 		//次のループ回数を数えるために変数の値を1に戻す
 		countNumber = 1;
