@@ -38,8 +38,8 @@ public class Ensyu4_8 {
 			System.out.print("整数値：");
 			//入力された値を読み込む
 			inputValue = inputNumber.nextInt(); 
-			
-		}while(inputValue <= 0);	//入力された値が負の場合は繰り返し入力を求める。
+		//入力された値が負の場合は繰り返し入力を求める。
+		}while(inputValue <= 0);
 		
 		//次のループ回数を数えるために変数の値を0に戻す
 		countNumber = 0;
