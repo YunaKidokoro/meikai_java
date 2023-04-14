@@ -24,12 +24,12 @@ public class Ensyu4_27 {
 		//Scannerクラスのインスタンスを初期化する。
 		Scanner inputNumber = new Scanner(System.in);
 		
-		//当てるべき数を10~99の乱数として生成。
-		int correctNumber = randomNumber.nextInt(89)+10;
+		//当てるべき数を0~99の乱数として生成。
+		int correctNumber = randomNumber.nextInt(100);
 		//数当てゲームの開始メッセージを表示
 		System.out.println("数当てゲーム開始！");
 		//ゲームのルールを説明する。
-		System.out.println("10~99の数を当ててください。");
+		System.out.println("0~99の数を当ててください。");
 		//入力された回答回数を読み込む変数を宣言
 		int answerNumber = 0;
 		do {
@@ -49,8 +49,13 @@ public class Ensyu4_27 {
 				//入力された値を変数に読み込む
 				playerChoice = inputNumber.nextInt();
 				//あたりの数字と入力を比較する
+				//範囲外の値が入力されたとき
+				if(playerChoice<0 || playerChoice>99) {
+					//入力された値が範囲外の値であることを表示
+					System.out.println("答えは0~99の間だよ！");
+				}
 				//入力された値の方が大きいとき
-				if(playerChoice > correctNumber) {
+				else if(playerChoice > correctNumber) {
 					//入力された値が大きいことを表示
 					System.out.println("もっと小さいよ！");
 				}
