@@ -55,9 +55,14 @@ public class Ensyu4_25 {
 		}
 		//合計値を表示する
 		System.out.print("合計は"+ sumValue +"です。");
-		//平均値を計算する
-		int averageValue = sumValue/loopCount;
-		//平均値を表示する
-		System.out.print("平均は"+ averageValue +"です。");
+		//平均を表す変数を宣言する
+		int averageValue = 0;
+		//ループ回数が0でない場合
+		if(loopCount!=0) {
+			//平均値を計算する
+			averageValue = sumValue/loopCount;
+			//平均値を表示する
+			System.out.print("平均は"+ averageValue +"です。");
+		}
 	}
 }
