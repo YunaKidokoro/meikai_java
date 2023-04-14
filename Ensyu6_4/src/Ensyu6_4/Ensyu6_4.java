@@ -25,12 +25,21 @@ public class Ensyu6_4 {
 		Random randomInput   = new Random();
 		//scannerクラスのインスタンスを初期化する
 		Scanner integerInput = new Scanner(System.in);
-		//要素数の入力を促す文を表示する
-		System.out.print("要素数:");
-		//入力された値を読み込む
-		int inputElement = integerInput.nextInt();
-		//配列を生成する
-		int []randomArray = new int[inputElement];
+		//要素数を表す変数を宣言する
+		int inputElement = 0;
+		
+		//ループの開始
+		do {
+			//要素数の入力を促す文を表示する
+			System.out.print("要素数:");
+			//入力された値を読み込む
+			inputElement = integerInput.nextInt();
+		//0以下の値が入力された場合繰り返す
+		}while(inputElement<=0);
+		
+		//配列を入力された要素数で宣言する
+		int [] randomArray = new int[ inputElement ];
+
 		//インデックスを0から要素数-1まで繰り返す
 		for(int indexNumber=0 ; indexNumber<inputElement ; indexNumber++) {
 			//配列にランダムな値を順に代入していく
