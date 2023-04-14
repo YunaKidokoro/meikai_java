@@ -60,7 +60,7 @@ public class Ensyu6_6 {
 			totalScore +=testArray[countIndex];
 		}
 		//平均値の計算を行う
-		int averageScore = totalScore/testMember;
+		float averageScore = (float)totalScore/testMember;
 		
 		//仮のテストの点数の最大値を表す変数を宣言する
 		int maxScore = 0;
