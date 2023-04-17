@@ -24,7 +24,9 @@ public class Ensyu6_11 {
 		Random randomNumber = new Random();
 		//Scannerクラスのインスタンスを初期化する
 		Scanner inputNumber = new Scanner(System.in);
-
+		
+		//乱数の生成範囲をあらわす値
+		final int RANDOM_RANGE = 10;
 		//要素数を表す変数を宣言する
 		int elementNumber = 0;
 		//ループの開始
@@ -42,7 +44,7 @@ public class Ensyu6_11 {
 			//配列の先頭から末尾まで走査
 			for (int firstIndex=0; firstIndex<elementNumber; firstIndex++) {
 				//ランダムな値で配列要素を初期化する
-				variableArray[firstIndex] = randomNumber.nextInt(10)+1;
+				variableArray[firstIndex] = randomNumber.nextInt(RANDOM_RANGE)+1;
 				//生成された値を探すべき値を表す変数に代入
 				int keyNumber = variableArray[firstIndex];
 				
