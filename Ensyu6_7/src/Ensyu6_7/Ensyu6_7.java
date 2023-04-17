@@ -59,7 +59,7 @@ public class Ensyu6_7 {
 		}
 		
 		//探索に成功した場合
-		if(secondCount<ELEMENT_NUMBER && secondCount>0) {
+		if(secondCount<=ELEMENT_NUMBER && secondCount>=0) {
 			//キーのあった配列のインデックスを表示
 			System.out.println("それはa["+secondCount+"]にあります。");
 		}
