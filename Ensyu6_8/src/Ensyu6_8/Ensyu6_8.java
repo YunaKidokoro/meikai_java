@@ -18,13 +18,16 @@ public class Ensyu6_8 {
 	 * 作成日:2023/04/14
 	 */
 	public static void main(String[]args) {
+		
 		//sucannerクラスのインスタンスを初期化する
 		Scanner inputNumber = new Scanner(System.in);
 		
 		//要素数を表す変数を宣言する
 		int elementNumber = 0;
 		//配列要素の合計を表す変数を宣言する
-		int totalScore = 0;
+		double totalScore = 0;
+		//カウント数
+		int countNumber=0;
 		
 		//ループの開始
 		do {
@@ -36,20 +39,22 @@ public class Ensyu6_8 {
 		}while(elementNumber<=0);
 		
 		//配列を宣言する
-		int [] variableArray = new int[ elementNumber ];
+		double [] variableArray = new double[ elementNumber ];
 		
 		//配列の先頭から末尾まで1個ずつ走査する
-		for(int countIndex : variableArray) {
+		for(double countIndex : variableArray) {
 			//各配列要素の値の入力を促す文を表示
-			System.out.print("a["+(countIndex+1)+"]=");
+			System.out.print("a["+(countNumber)+"]=");
 			//入力された値で配列の各要素を初期化する
-			variableArray[countIndex] = inputNumber.nextInt();
+			countIndex = inputNumber.nextDouble();
 			//合計値の計算を行う
-			totalScore +=variableArray[countIndex];
+			totalScore +=countIndex;
+			//カウント数を増やす
+			countNumber+=1;
 		}
 		
 		//平均値の計算を行う
-		float averageScore = (float)totalScore/elementNumber;
+		double averageScore = totalScore/elementNumber;
 		
 		//合計値を表示する
 		System.out.println("合計値は"+totalScore+ "です。");
