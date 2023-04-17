@@ -26,6 +26,8 @@ public class Ensyu6_9 {
 		
 		//要素数を表す変数を宣言する
 		int elementNumber = 0;
+		//1から10のランダムな値を生成するときに使う値
+		final int RANDOM_RANGE = 10;
 		//ループの開始
 		do {
 			//要素数の入力を促す文を表示
@@ -40,7 +42,7 @@ public class Ensyu6_9 {
 		//配列の先頭から末尾まで走査
 		for (int indexNumber=0; indexNumber<elementNumber; indexNumber++) {
 			//ランダムな値で配列要素を初期化する
-			variableArray[indexNumber] = randomNumber.nextInt(10)+1;
+			variableArray[indexNumber] = randomNumber.nextInt(RANDOM_RANGE)+1;
 			//配列要素を表示する
 			System.out.println("a["+indexNumber+"]="+variableArray[indexNumber]);
 		}
