@@ -44,7 +44,7 @@ public class Ensyu6_13 {
 		int[] copyArray = new int[elementNumber]; 
 		//配列の先頭から末尾までループする
 		for(int firstIndex=0; firstIndex<elementNumber; firstIndex++) {
-			//コピーの配列に元の配列要素の末尾の値かた代入していく
+			//コピーの配列に元の配列要素の末尾の値から代入していく
 			copyArray[firstIndex] = baseArray[elementNumber-1-firstIndex];
 		}
 		
