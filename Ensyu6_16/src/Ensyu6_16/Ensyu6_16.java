@@ -58,6 +58,7 @@ public class Ensyu6_16 {
 			for(int  secondIndex= 0; secondIndex<4; secondIndex++) {
 				//配列の先頭から末尾まで列ループ
 				for(int thirdIndex=0; thirdIndex<3; thirdIndex++) {
+					//積の計算を行う
 					resultArray[firstIndex][secondIndex] += firstArray[firstIndex][thirdIndex]*secondArray[thirdIndex][secondIndex];
 				}
 			}
@@ -71,6 +72,7 @@ public class Ensyu6_16 {
 				//計算結果の表示
 				System.out.printf("%4.1f  ",resultArray[lineIndex][rowIndex]);
 			}
+			//改行を行う
 			System.out.println();
 		}
 	}
