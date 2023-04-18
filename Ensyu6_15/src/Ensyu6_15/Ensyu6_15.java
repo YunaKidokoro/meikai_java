@@ -27,32 +27,32 @@ public class Ensyu6_15 {
 		//繰り返し問題を解くかを決める変数
 		int oneMoreNumber = 0;
 		//各曜日の英単語で初期化した配列
-		String[] dayString = {"sanday","monday","tuesday","wednesday","thursday","friday","saturday"};
+		String[] dayString = {"sunday","monday","tuesday","wednesday","thursday","friday","saturday"};
 		//各曜日の英単語で初期化した配列
 		String[] japaneseDay = {"日","月","火","水","木","金","土"};
 		//曜日名を英語で解答させることを表示
 		System.out.println("英語の曜日名を小文字で入力してください。");
 		//ループの開始
+		//入力させる文字を代入する変数を宣言
+		String answerDay = "a";
+		//問題の曜日を表す変数
+		int questionDay  = 0;
 		do {
-			//入力させる文字を代入する変数を宣言
-			String answerDay = "a";
-			//問題の曜日を表す変数
-			int questionDay  = 0;
 			//ループの開始
 			do {
 				//問題の曜日をランダムに決める
-				questionDay = randomDay.nextInt(7);
+				questionDay = randomDay.nextInt(7)+1;
 			//前問の曜日と同じ場合は乱数を生成し直す
 			}while(answerDay.equals(dayString[questionDay-1]));
 			
 			//正解しない限りくりかえす
 			while(true) {
 				//問題文の表示
-				System.out.println(japaneseDay[ questionDay ]+ "曜日:");
+				System.out.println(japaneseDay[ questionDay-1 ]+ "曜日:");
 				//入力された文字列を読み込む
 				answerDay = inputString.next();
 				//入力された文字列が答えと等しい場合
-				if(answerDay.equals(dayString[questionDay])) {
+				if(answerDay.equals(dayString[questionDay-1])) {
 					//ループから抜ける
 					break;
 				}
