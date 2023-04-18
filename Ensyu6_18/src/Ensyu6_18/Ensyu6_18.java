@@ -56,18 +56,18 @@ public class Ensyu6_18 {
 			rowArray[lineIndex] = rowNumber;
 		}
 		//二次元配列を宣言
-		int[][] nankaArray = new int[lineNumber][rowArray.length] ;
+		int[][] someLongArray = new int[lineNumber][rowArray.length] ;
 		
 		//行のループ
 		for(int lineIndex=0; lineIndex<lineNumber;lineIndex++) {
 			//各行に列数を代入していく
-			nankaArray[lineIndex] = new int[rowArray[lineIndex]];
+			someLongArray[lineIndex] = new int[rowArray[lineIndex]];
 			//列のループ			
 			for(int rowIndex=0; rowIndex<rowArray[lineIndex]; rowIndex++) {
 				//配列要素の入力を促す文を表示
 				System.out.print("["+lineIndex+","+rowIndex+"]=");
 				//入力された値を配列要素に代入
-				nankaArray[lineIndex][rowIndex] = inputValue.nextInt();
+				someLongArray[lineIndex][rowIndex] = inputValue.nextInt();
 			}
 		}
 		//出来上がった配列を表示する
@@ -75,7 +75,7 @@ public class Ensyu6_18 {
 			//列のループ
 			for(int rowIndex=0; rowIndex<rowArray[lineIndex]; rowIndex++) {
 				//各配列要素を表示
-				System.out.printf("%3d",nankaArray[lineIndex][rowIndex]);
+				System.out.printf("%3d",someLongArray[lineIndex][rowIndex]);
 			}			
 			//改行を入れる
 			System.out.println();
