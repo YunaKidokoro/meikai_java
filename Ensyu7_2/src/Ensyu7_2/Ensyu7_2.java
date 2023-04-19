@@ -8,8 +8,14 @@ import java.util.Scanner;
 * 作成日:2023/02/19
 * */
 public class Ensyu7_2 {
-	//3つのint型の引数の最小値を求めるメソッド
-	//メソッド名や引数は教本の指示に従った命名
+	/*
+	 * メソッド名:min
+	 * 概要:3つの整数の最小値を求める
+	 * 引数:int型・a,b,c・整数の値を受け取る変数
+	 * 戻り値:int型・minimumValue・引数a,b,cの最小値
+	 * 作成者:城所佑奈
+	 * 作成日:2023/02/19
+	 * */
 	static int min(int a, int b, int c) {
 		//最小値を表す変数を前言（仮にaが最小とする）
 		int minimumValue = a;
@@ -30,8 +36,8 @@ public class Ensyu7_2 {
 	/*
 	 * 関数名:main
 	 * 概要:入力された3つの値の最小値を表示する
-	 * 引数:inputIntegerA,inputIntegerB,inputIntegerC、入力された３つの値
-	 * 戻り値:minimumValue、引数のうち最小値の値を返す
+	 * 引数:なし
+	 * 戻り値:なし
 	 * 作成者:城所佑奈
 	 * 作成日:2023/04/19
 	 * */
