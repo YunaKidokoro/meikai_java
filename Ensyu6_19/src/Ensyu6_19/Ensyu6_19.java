@@ -67,8 +67,8 @@ public class Ensyu6_19 {
 					System.out.print((lineIndex+1)+"組"+(rowIndex+1)+"番の点数:");
 					//入力された値を配列要素に代入
 					scoreArray[lineIndex][rowIndex] = inputValue.nextInt();
-					//入力された値が0以下の場合
-					if(scoreArray[lineIndex][rowIndex]<=0) {
+					//入力された値が0より小さい場合
+					if(scoreArray[lineIndex][rowIndex]<0) {
 						//同じ行の列数を入力できるようにデクリメント
 						rowIndex--;
 						//ループの先頭にもどる
