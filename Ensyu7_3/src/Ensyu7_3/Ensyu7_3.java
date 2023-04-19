@@ -1,5 +1,5 @@
 package Ensyu7_3;
-
+//Scannerクラスをインポートする
 import java.util.Scanner;
 
 /*
@@ -9,8 +9,14 @@ import java.util.Scanner;
 * 作成日:2023/02/19
 * */
 public class Ensyu7_3 {
-	//3つのint型の引数の中央値を求めるメソッド
-	//メソッド名・引数名は教本の指示に従った命名
+	/*
+	 * メソッド名:min
+	 * 概要:3つの整数の中央値を求める
+	 * 引数:int型・a,b,c・整数の値を受け取る変数
+	 * 戻り値:int型・returnNumber・引数a,b,cの中央値
+	 * 作成者:城所佑奈
+	 * 作成日:2023/02/19
+	 * */
 	static int med(int a, int b, int c) {
 		//最小値を表す変数を前言（仮にaが最小とする）
 		int minimumValue = a;
@@ -39,6 +45,14 @@ public class Ensyu7_3 {
 		//中央値を返す
 		return returnNumber;
 	}
+	/*
+	 * 関数名：main
+	 * 概要:入力された３つの整数の中央値を表示する
+	 * 引数:なし
+	 * 戻り値:なし
+	 * 作成者:城所佑奈
+	 * 作成日:2023/04/19
+	 * */
 	public static void main(String[]args) {
 		//Scanerクラスのインスタンスを初期化する
 		Scanner inputInteger = new Scanner(System.in);
