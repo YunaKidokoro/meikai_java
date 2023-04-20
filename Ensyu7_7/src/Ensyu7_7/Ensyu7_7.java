@@ -40,13 +40,13 @@ public class Ensyu7_7 {
 	 * */
 	public static void main(String[]args) {
 		//スキャナークラスのインスタンスを初期化する
-		Scanner inputtext = new Scanner(System.in);
+		Scanner inputText = new Scanner(System.in);
 		//左下直角三角形を表示することを説明
 		System.out.println("左下直角三角形を表示します");
 		//三角形の段数の入力を促す文を表示
 		System.out.print("段数：");
 		//入力された値を読み込む
-		int inputline = inputtext.nextInt();
+		int inputline = inputText.nextInt();
 		//イテレータが0から段数まで変化する間ループする
 		for(int indexNumber=0;indexNumber<=inputline;indexNumber++) {
 			//記号＊を表示
