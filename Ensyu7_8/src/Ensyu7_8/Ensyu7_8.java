@@ -11,7 +11,7 @@ import java.util.Scanner;
 * */
 public class Ensyu7_8 {
 	/*
-	 * 関数名:ramdom
+	 * 関数名:random
 	 * 概要:a以上b未満の乱数を生成する
 	 * 引数:int型・a,b・乱数生成の範囲を決める変数
 	 * 戻り値:int型・randomReturn・生成された乱数を返す
