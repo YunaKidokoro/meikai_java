@@ -53,22 +53,22 @@ public class ENsyu7_11 {
 		System.out.println();
 	}
 	/*
-	 * 関数名:printBits
-	 * 概要:ビットの表示をする
-	 * 引数:int型・printInteger・表示したい整数値を表す
-	 * 戻り値:なし
+	 * 関数名:twoMultiplier
+	 * 概要:2のべき乗の計算をする
+	 * 引数:int型・putOnNumber・乗数を表す
+	 * 戻り値:int型・ResultNumber・2のputOnNumber乗を表す
 	 * 作成日:2023/04/20
 	 * */
 	static int twoMultiplier(int putOnNumber) {
 		//計算結果を表す変数
-		int RsultNumber = 1;
+		int ResultNumber = 1;
 			//putOnNumber回ループする
 			for(int i=0; i<putOnNumber ; i++) {
 			//2を書ける
-			RsultNumber *= 2;
+			ResultNumber *= 2;
 		}
 		//計算結果を表示
-		return RsultNumber;
+		return ResultNumber;
 	}
 
 	/*
