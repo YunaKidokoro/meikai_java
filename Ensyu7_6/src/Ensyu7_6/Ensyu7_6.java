@@ -35,11 +35,11 @@ public class Ensyu7_6 {
 	 * */
 	public static void main(String[]args) {
 		//スキャナークラスのインスタンスを初期化する
-		Scanner inputtext = new Scanner(System.in);
+		Scanner inputText = new Scanner(System.in);
 		//月の入力を促す文を表示
 		System.out.print("何月？：");
 		//入力された値を読み込む
-		int inputMonth = inputtext.nextInt();
+		int inputMonth = inputText.nextInt();
 		//入力された月の季節を表示する
 		printSeason(inputMonth);
 	}
