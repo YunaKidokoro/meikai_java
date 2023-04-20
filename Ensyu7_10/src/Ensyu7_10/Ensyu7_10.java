@@ -48,8 +48,10 @@ public class Ensyu7_10 {
 	 * 作成日:2023/04/19
 	 * */
 	static void randomQuestion(int a, int b, int c) {
+		//乱数生成時に用いる、式の形が4種類であることを表す変数を宣言
+		final int FORMULA_SHAPE = 4;
 		//問題を選ぶ乱数を生成する
-		int questionNumber = randomNumber.nextInt(4);
+		int questionNumber = randomNumber.nextInt(FORMULA_SHAPE);
 		//乱数が0の場合
 		if(questionNumber == 0) {
 			//足し算だけの式を表示
@@ -102,12 +104,14 @@ public class Ensyu7_10 {
 		System.out.println("暗算力トレーニング！！");
 		//ループの開始
 		do {
+			//乱数生成時に用いる3桁の整数の数を表す変数を宣言
+			final int RANDOM_NINE = 900 , RANDOM_ONE = 100;
 			//3桁の数を生成
-			int x = randomNumber.nextInt(900) + 100;
+			int x = randomNumber.nextInt(RANDOM_NINE) + RANDOM_ONE;
 			//3桁の数を生成
-			int y = randomNumber.nextInt(900) + 100;
+			int y = randomNumber.nextInt(RANDOM_NINE) + RANDOM_ONE;
 			//3桁の数を生成
-			int z = randomNumber.nextInt(900) + 100;
+			int z = randomNumber.nextInt(RANDOM_NINE) + RANDOM_ONE;
 			
 			//ランダムに問題を出題（表示）
 			randomQuestion(x,y,z);
