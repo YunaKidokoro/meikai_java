@@ -18,12 +18,16 @@ public class Ensyu7_9 {
 	 * 作成日:2023/04/19
 	 * */
 	static int readPlusInt() {
+		//正の整数を表す変数を宣言
 		int plusInteger = 0;
 		do {
 			//正の整数値の入力を促す文を表示
 			System.out.print("正の整数値:");
+			//入力された値を読み込む
 			plusInteger = inputNumber.nextInt();
+		//入力が0以下の場合は繰り返す
 		}while(plusInteger <=0);
+		//入力された値を返す
 		return plusInteger;
 	}
 	/*
@@ -34,6 +38,7 @@ public class Ensyu7_9 {
 	 * 作成日:2023/04/19
 	 * */
 	public static void main(String[]args) {
+		//入力された値を表示する
 		System.out.println("入力した値は"+readPlusInt()+"です");
 	}
 }
