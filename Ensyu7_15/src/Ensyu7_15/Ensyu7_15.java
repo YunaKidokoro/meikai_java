@@ -31,7 +31,7 @@ public class Ensyu7_15 {
 		//入力された値を返す
 		return plusInteger;
 	}
-	/*
+	/*このメソッド内の命名は教本に従う
 	 * 関数名:sumOf
 	 * 概要:配列要素の和を求める
 	 * 　引数:int[]型・a[]・和を求めたい値の入った配列
@@ -39,10 +39,14 @@ public class Ensyu7_15 {
 	 * 作成日:2023/04/21
 	 * */
 	static int sumOf(int[] a) {
+		//要素数の和を表す変数を宣言
 		int sumValue = 0;
+		//配列要素の先頭から末尾までループ
 		for(int i=0 ; i<a.length; i++) {
+			//配列要素を足していく
 			sumValue += a[i];
 		}
+		//全配列要素の和を返す
 		return sumValue;
 	}
 	/*
