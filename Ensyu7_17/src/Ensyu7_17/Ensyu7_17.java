@@ -20,7 +20,7 @@ public class Ensyu7_17 {
 	 * */
 	static int readPlusInt() {
 		//正の整数を表す変数を宣言
-		int plusInteger;
+		int plusInteger=0;
 		//ループの開始
 		do {
 			//正の整数値の入力を促す文を表示
@@ -55,7 +55,7 @@ public class Ensyu7_17 {
 	}
 	/*このメソッドの内の命名は教本に従う
 	 * 関数名:linerSarch
-	 * 概要:配列要素の和を求める
+	 * 　概要:配列要素にある値が含まれているか探る
 	 * 　引数:int[]型・a[]・ある配列要素を探したい配列
 	 * 戻り値:int型・sumValue・配列が探している値を含むか、
 	 * 		　含んでいればどこにあるかを返す
