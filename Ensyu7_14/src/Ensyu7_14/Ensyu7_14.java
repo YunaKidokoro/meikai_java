@@ -11,6 +11,8 @@ import java.util.Scanner;
 public class Ensyu7_14 {
 	//スキャナークラスのインスタンスを初期化する
 	static Scanner inputNumber = new Scanner(System.in);
+	//ビット数を表す変数を宣言
+	static int bitNumber = 32;
 	/*
 	 * 関数名:readPlusInt
 	 * 概要:正の整数値の入力を求め、その値を返す
@@ -41,7 +43,7 @@ public class Ensyu7_14 {
 	 * */
 	static void printBits(int printInteger) {
 		//32ビットを1ビットづつ減らす間ループする
-		for(int i=31; i>=0; i--) {
+		for(int i=bitNumber-1; i>=0; i--) {
 			//iだけ右シフトさせたときて第iビットが１の場合
 			if(( printInteger>>>i & 1 ) ==1) {
 				//第iビットとして１を表示する
@@ -149,7 +151,7 @@ public class Ensyu7_14 {
 			//入力された値を読み込む
 			posInteger = readPlusInt();
 		//入力された値が負または32以上であれば繰り返す
-		}while(posInteger>31 || posInteger<0);
+		}while(posInteger>bitNumber-1 || posInteger<0);
 		
 		//posビット目から連続させる値を表す変数を宣言
 		int inputN = 0;
@@ -159,7 +161,7 @@ public class Ensyu7_14 {
 			//入力された値を読み込む
 			inputN = readPlusInt() ;
 		//入力された値が負またはposと合わせて32以上であれば繰り返す
-		}while(inputN<0 || inputN+posInteger>32);
+		}while(inputN<0 || inputN+posInteger>bitNumber);
 		
 		
 		//何を表示するかを表示
