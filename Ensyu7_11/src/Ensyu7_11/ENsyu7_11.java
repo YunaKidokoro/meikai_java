@@ -10,6 +10,8 @@ import java.util.Scanner;
 public class ENsyu7_11 {
 	//スキャナークラスのインスタンスを初期化する
 	static Scanner inputNumber = new Scanner(System.in);
+	//ビット数を表す変数を宣言
+	static int bitNumber = 32;
 	/*
 	 * 関数名:readPlusInt
 	 * 概要:正の整数値の入力を求め、その値を返す
@@ -40,7 +42,7 @@ public class ENsyu7_11 {
 	 * */
 	static void printBits(int printInteger) {
 		//32ビットを1ビットづつ減らす間ループする
-		for(int i=31; i>=0; i--) {
+		for(int i=bitNumber; i>=0; i--) {
 			//iだけ右シフトさせたときて第iビットが１の場合
 			if(( printInteger>>>i & 1 ) ==1) {
 				//第iビットとして１を表示する
@@ -64,7 +66,7 @@ public class ENsyu7_11 {
 		int ResultNumber = 1;
 			//putOnNumber回ループする
 			for(int i=0; i<putOnNumber ; i++) {
-			//2を書ける
+			//2を掛ける
 			ResultNumber *= 2;
 		}
 		//計算結果を表示
@@ -96,7 +98,7 @@ public class ENsyu7_11 {
 			//入力をされたシフトする量を変数に読み込む
 			leftShift =  readPlusInt();
 			//入力された値が32以下であればループから抜ける
-			if(leftShift < 32) {break;}
+			if(leftShift < bitNumber) {break;}
 		}
 		
 		//整数を表示するときのラベルを表示
@@ -131,7 +133,7 @@ public class ENsyu7_11 {
 			//入力をされたシフトする量を変数に読み込む
 			rightShift =  readPlusInt();
 			//入力された値が32以下であればループから抜ける
-			if(rightShift < 32) {break;}
+			if(rightShift < bitNumber) {break;}
 			}
 		//整数を表示するときのラベルを表示
 		System.out.println("(整数)");
