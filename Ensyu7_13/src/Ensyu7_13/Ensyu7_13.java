@@ -126,10 +126,18 @@ public class Ensyu7_13 {
 	public static void main(String[]args) {
 		//posビット目がいくつかを入力させる
 		System.out.println("posビット目を決めて下さい。");
-		//入力された値を読み込む
-		int posInteger = readPlusInt();
+		
+		//posビット目を表す変数を宣言
+		int posInteger = 0;
+		//ループの開始
+		do {
+			//入力された値を読み込む
+			posInteger = readPlusInt();
+		//入力された値が32以上なら繰り返す
+		}while(posInteger>=32);
+		
 		//元の整数を表示することを表示
-		System.out.println("元の整数を入力してください。");
+		System.out.println("元になる整数を入力してください。");
 		//入力された値を読み込む
 		int inputInteger = readPlusInt();
 		//posビット目が1の整数を表示する
