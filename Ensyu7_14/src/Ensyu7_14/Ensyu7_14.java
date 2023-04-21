@@ -149,7 +149,7 @@ public class Ensyu7_14 {
 			//入力された値を読み込む
 			posInteger = readPlusInt();
 		//入力された値が負または32以上であれば繰り返す
-		}while(posInteger>32 || posInteger<0);
+		}while(posInteger>31 || posInteger<0);
 		
 		//posビット目から連続させる値を表す変数を宣言
 		int inputN = 0;
@@ -159,7 +159,7 @@ public class Ensyu7_14 {
 			//入力された値を読み込む
 			inputN = readPlusInt() ;
 		//入力された値が負またはposと合わせて32以上であれば繰り返す
-		}while(inputN<=0 || inputN+posInteger>32);
+		}while(inputN<0 || inputN+posInteger>32);
 		
 		
 		//何を表示するかを表示
