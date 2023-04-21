@@ -11,6 +11,8 @@ import java.util.Scanner;
 public class Ensyu7_12 {
 	//スキャナークラスのインスタンスを初期化する
 	static Scanner inputNumber = new Scanner(System.in);
+	//ビット数を表す変数を宣言
+	static int bitNumber = 32;
 	/*
 	 * 関数名:readPlusInt
 	 * 概要:正の整数値の入力を求め、その値を返す
@@ -41,7 +43,7 @@ public class Ensyu7_12 {
 	 * */
 	static void printBits(int printInteger) {
 		//32ビットを1ビットづつ減らす間ループする
-		for(int i=31; i>=0; i--) {
+		for(int i=bitNumber-1; i>=0; i--) {
 			//iだけ右シフトさせたときて第iビットが１の場合
 			if(( printInteger>>>i & 1 ) ==1) {
 				//第iビットとして１を表示する
@@ -67,7 +69,7 @@ public class Ensyu7_12 {
 		//nビットシフトさせる
 		y = x >>> n;
 		//nビットシフトされた分が上位にあって残りが0になるような整数
-		int newX= x << 32 - n;
+		int newX= x << bitNumber - n;
 		//動かした分はそのままで、残りは一方に１があれば１になる
 		int resultX = y | newX;
 		return resultX;
@@ -87,7 +89,7 @@ public class Ensyu7_12 {
 		y = x << n;
 		//nビットシフトされたときに落ちた分が下位にあって、
 		//残りが0になるような整数
-		int newX = x >>> 32-n;
+		int newX = x >>> bitNumber-n;
 		//動かした分はそのままで、残りは一方に１があれば１になる
 		int resultX = y | newX;
 		//回転後の値を返す
