@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class Ensyu7_19 {
 	//スキャナークラスのインスタンスを初期化
 	static Scanner inputNumber = new Scanner(System.in);
-	
 	/*
 	 * 関数名:readPlusInt
 	 * 概要:正の整数値の入力を求め、その値を返す
