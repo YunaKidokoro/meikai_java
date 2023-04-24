@@ -57,7 +57,7 @@ public class Ensyu7_20 {
 	 * 関数名:aryIns
 	 * 　概要:配列にある値を挿入する
 	 * 　引数:int[]型・a[]・値を挿入したい配列
-	 * 		　　int型・idx・挿入したいインデック
+	 * 		　　int型・idx・挿入したいインデックス
 	 * 			int型・ｘ ・挿入する値
 	 * 戻り値:int[]型・a[]・ある値の挿入された配列
 	 * 作成日:2023/04/21
@@ -84,7 +84,7 @@ public class Ensyu7_20 {
 	static void printArray(int[]printArray) {
 		//配列の先頭から末尾までループ
 		for(int i=0; i < printArray.length ; i++) {
-			//インデックiの配列要素を表示する
+			//インデックスiの配列要素を表示する
 			System.out.println("a["+ i +"]="+printArray[i]);
 		}
 	}
@@ -105,19 +105,19 @@ public class Ensyu7_20 {
 		//配列要素を代入する
 		int []inputArray = arrayInput(elementValue);
 		
-		//挿入位置のインデックを表す変数を宣言
+		//挿入位置のインデックスを表す変数を宣言
 		int chengeIndex  = 0;
 		//挿入するインデックスの位置の入力を促す文を表示
-		System.out.print("挿入したいインデックの位置：");
+		System.out.print("挿入したいインデックスの位置：");
 		do{
 			//入力された値を読み込む
 			chengeIndex = inputNumber.nextInt();
-			//挿入位置のインデックが配列要素数以上の場合
+			//挿入位置のインデックスが配列要素数以上の場合
 			if(chengeIndex>=elementValue) {
 				//再入力を求める表示
 				System.out.print("もう一度入力して下さい：");}
 			}
-		//挿入位置のインデックが配列要素数以上なら繰り返す
+		//挿入位置のインデックスが配列要素数以上なら繰り返す
 		while(chengeIndex>=elementValue);
 		
 		//挿入したい配列要素の値の入力を求める表示
