@@ -128,7 +128,7 @@ public class Ensyu7_23 {
 	 *  */
 	public static void main(String[]args) {
 		//なにをするのか説明する
-		System.out.println("配列aの要素の中である値xのインデックスを\n要素に持つ配列を表示します。\n");
+		System.out.println("配列aの要素のある値xのインデックスを\n要素に持つ配列を表示します。\n");
 		//配列要素数を入力させる
 		System.out.println("配列Aの要素数を入力してください。");
 		//変数に入力された値を読み込む
