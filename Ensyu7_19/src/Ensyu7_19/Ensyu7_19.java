@@ -81,7 +81,7 @@ public class Ensyu7_19 {
 	static void printArray(int[]printArray) {
 		//配列の先頭から末尾までループ
 		for(int i=0; i < printArray.length ; i++) {
-			//インデックiの配列要素を表示する
+			//インデックスiの配列要素を表示する
 			System.out.println("a["+ i +"]="+printArray[i]);
 		}
 	}
@@ -102,19 +102,19 @@ public class Ensyu7_19 {
 		//配列要素を代入する
 		int []inputArray = arrayInput(elementValue);
 		
-		//削除するインデックを表す変数を宣言
+		//削除するインデックスを表す変数を宣言
 		int deleteIndex  = 0;
 		//削除する配列要素のインデックスの入力を促す文を表示
 		System.out.print("削除したい配列要素の先頭のインデックス：");
 		do{
 			//入力された値を読み込む
 			deleteIndex = inputNumber.nextInt();
-			//削除したいインデックが末尾以上の場合
+			//削除したいインデックスが末尾以上の場合
 			if(deleteIndex>=elementValue-1) {
 				//再入力を求める表示
 				System.out.print("もう一度入力して下さい：");}
 			}
-		//削除したいインデックが配列要素数以上なら繰り返す
+		//削除したいインデックスが配列要素数以上なら繰り返す
 		while(deleteIndex>=elementValue-1);
 		
 		//削除したい配列要素の個数を表す変数を宣言
