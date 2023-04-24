@@ -66,13 +66,7 @@ public class Ensyu7_21 {
 	static void aryExchng(int[]a, int []b) {
 		//配列の参照を入れ替えるための仮置き用配列の宣言
 		int []onceArray = a;
-		//参照の異なる配列aの要素の値を持つ配列を表す
-		int []copyArrayA = new int [a.length];
-		//インデックスが先頭から末尾までループする
-		for(int i=0 ; i<a.length ; i++) {
-			//もともとの配列aの要素の値を代入する。
-			copyArrayA[i] = a[i];
-		}
+		
 		//配列aの方が長い場合
 		if(a.length > b.length) {
 			//配列aが配列b（短い方）を参照するようにする。
@@ -80,12 +74,20 @@ public class Ensyu7_21 {
 			//配列bが配列a（長い方）を参照するようにする。
 			b = onceArray;
 		}
+		
+		//配列aとは参照の異なり、配列aの要素の値を持つ配列を宣言
+		int []elementArrayA = new int [a.length];
+		//インデックスが先頭から末尾までループする
+		for(int i=0 ; i<a.length ; i++) {
+			//配列aの要素を代入する
+			elementArrayA[i] = a[i];
+		}
 		//配列要素の少ない方の配列でインデックスが先頭から末尾までループする
 		for(int i=0 ; i<a.length ; i++) {
 			//配列aに配列bの要素を入れ替える
 			a[i] = b[i];
 			//配列bにもともとの配列aの要素を入れ替える。
-			b[i] = copyArrayA[i];
+			b[i] = elementArrayA[i];
 		}
 	}
 
@@ -129,16 +131,14 @@ public class Ensyu7_21 {
 		//配列要素を代入する
 		int []inputArrayB = arrayInput(elementValueB, "b");
 
-		//配列要素数を入力させる
+		//配列要素の入れ替えをすることを表示
 		System.out.println("配列Aと配列Bの要素を入れ替えます。");
 		aryExchng(inputArrayA, inputArrayB);
-		//値の挿入された配列を表示する
+		//配列を表示する
 		printArray(inputArrayA, "a");
 		//コンソール画面を見やすくしたいので改行をいれる
 		System.out.println();
-		//値の挿入された配列を表示する
-		printArray(inputArrayB, "b");
-
-		
+		//配列を表示する
+		printArray(inputArrayB, "b");	
 	}
 }
