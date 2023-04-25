@@ -65,7 +65,7 @@ public class Ensyu7_25 {
 	 * */
 	static int[] arrayRmvOfN(int[]a, int idx, int n) {
 		//値の削除されたあとの配列を宣言
-		int removeArray[] = new int[a.length -n]; //個数
+		int removeArray[] = new int[a.length -n];
 		//配列aのインデックスを表す
 		int j = 0;
 		//配列の先頭から末尾までループ
