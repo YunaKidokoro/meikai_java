@@ -22,9 +22,9 @@ public class Ensyu7_28 {
 	static int[][] arrayInput2d(int lineValue, int rowValue) {
 		//配列の宣言
 		int [][]inputArray = new int[lineValue][rowValue];
-		//行のインデックスが0から配列要素数分ループする
+		//行のループ
 		for(int i=0; i<lineValue; i++) {
-			//列のインデックスが0から配列要素数分ループする
+			//列のループ
 			for(int j=0; j<rowValue; j++) {
 				//値を入力する配列のインデックスを表示
 				System.out.print("a["+i+"]["+j+"]=");
@@ -37,17 +37,17 @@ public class Ensyu7_28 {
 	}
 	/*
 	 * 関数名:printArray2d
-	 * 　概要:配列要素を表示する
+	 * 　概要:二次元配列の要素を表示する
 	 * 　引数:int[][]型・printArray[][]・表示したい配列
 	 * 戻り値:なし
 	 * 作成日:2023/04/21
 	 * */
 	static void printArray2d(int[][]printArray) {
-		//行のインデックスが0から配列要素数分ループする
+		//行のループ
 		for(int i=0; i < printArray.length ; i++) {
-			//列のインデックスが0から配列要素数分ループする
+			//列のループ
 			for(int j=0; j<printArray[i].length; j++) {
-				//インデックiの配列要素を表示する
+				//配列要素を表示する
 				System.out.printf("%3d",printArray[i][j]);
 			}
 			//次の行に移る前に改行をする。
@@ -74,10 +74,9 @@ public class Ensyu7_28 {
 		//入力された値を返す
 		return plusInteger;
 	}
-	/*
+	/*このメソッド内の命名は教本に従う
 	 * 関数名:addMatrix
-	 * 概要:３つの配列の要素数が等しければ加算を行いtrueを返し、
-	 * 		等しなければ加算を行わずfalseを返す
+	 * 概要:２つの配列の和を求め結果を格納した配列を返す
 	 * 引数:int[][]型・ｘ・１つ目の行列
 	 * 		int[][]型・ｙ・２つ目の行列
 	 * 戻り値:int[][]型・resultArray・計算結果を格納した配列
@@ -86,7 +85,7 @@ public class Ensyu7_28 {
 	static int[][] addMatrix(int[][] x, int[][] y) {
 		//計算結果を格納する配列を宣言する
 		int [][]resultArray = new int[x.length][x[0].length];
-		//配列の０行目から最後の行までループ
+		//行のループ
 		for(int i=0; i<x.length; i++) {
 			//列のループ
 			for(int j=0; j<x[i].length; j++) {	
@@ -97,8 +96,6 @@ public class Ensyu7_28 {
 		//計算結果を返す
 		return resultArray;
 	}
-
-	
 	/*
 	 * 関数名:main
 	 * 概要:２つの行列の和を求める
@@ -108,6 +105,8 @@ public class Ensyu7_28 {
 	 * 作成日:2023/04/24
 	 * */
 	public static void main(String[]args) {
+		//プログラムの説明文を表示
+		System.out.println("２つの配列の和を求めます。");
 		
 		//配列aの行数の入力を促す文を表示
 		System.out.println("行列の行数を入力してください。");
@@ -124,7 +123,7 @@ public class Ensyu7_28 {
 		int [][]firstArray = arrayInput2d(linesValue, rowsValue);		
 		//１つめの配列の表示
 		printArray2d(firstArray);
-		//見やすくしたいための改行
+		//コンソール画面を見やすくするために改行
 		System.out.println();
 		
 		//２つめの配列の要素の入力
@@ -133,15 +132,12 @@ public class Ensyu7_28 {
 		int [][]secondArray = arrayInput2d(linesValue, rowsValue);		
 		//２つめの配列の表示
 		printArray2d(secondArray);
-		//見やすくしたいための改行
+		//コンソール画面を見やすくするために改行
 		System.out.println();
 
 		//配列の和を表示することを表示
 		System.out.println("2つの配列の和");
-		//計算結果を格納するための配列を宣言
-		int [][]resultArray = addMatrix(firstArray, secondArray);
-		
 		//計算結果の表示
-		printArray2d(resultArray);
+		printArray2d(addMatrix(firstArray, secondArray));
 	}
 }
