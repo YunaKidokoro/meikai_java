@@ -10,7 +10,6 @@ import java.util.Scanner ;
 public class Ensyu7_27 {
 	//スキャナークラスのインスタンスを初期化する
 	static Scanner inputNumber = new Scanner(System.in);
-	
 	/*
 	 *  関数名:arrayInput2d
 	 * 　概要:各配列要素を入力して返す
@@ -96,7 +95,7 @@ public class Ensyu7_27 {
 					//列のループ
 					for(int j=0; j<x[i].length; j++) {	
 						//配列の和を求める
-						z[i][j] = x[i][j] + y[i][j];
+						z[i][j] = x[i][j] + y[i][j] + z[i][j];
 					}
 				
 				}
@@ -161,15 +160,20 @@ public class Ensyu7_27 {
 		System.out.println("配列cの列数を入力してください。");
 		//配列cの列数を入力
 		int rowsC  = readInteger();
-		//計算結果を格納するための配列を宣言
-		int [][]resultArray = new int[linesC][rowsC];
+		//各配列要素の入力
+		int [][]thirdArray = arrayInput2d(linesB, rowsB);		
+		//配列bの表示
+		printArray2d(thirdArray);
+
 		
 		//各配列の要素数が等しいか調べる
-		boolean compareResult = addMatrix(firstArray, secondArray, resultArray);
+		boolean compareResult = addMatrix(firstArray, secondArray, thirdArray);
 		//戻り値が正の場合、配列の和を表示する
 		if(compareResult == true) {
+			//計算結果を表示することの表示
+			System.out.println("３つの配列の和");
 			//計算結果の表示
-			printArray2d(resultArray);
+			printArray2d(thirdArray);
 		}
 		//戻り値が負の場合、計算不可であることをひょうじする。
 		else {
