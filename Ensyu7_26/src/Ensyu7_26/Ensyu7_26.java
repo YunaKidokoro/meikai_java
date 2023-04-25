@@ -28,7 +28,7 @@ public class Ensyu7_26 {
 			//入力された値を読み込む
 			plusInteger = inputNumber.nextInt();
 		//入力が0以下の場合は繰り返す
-		}while(plusInteger <0);
+		}while(plusInteger <=0);
 		//入力された値を返す
 		return plusInteger;
 	}
@@ -117,7 +117,7 @@ public class Ensyu7_26 {
 		//配列要素を代入する
 		int []inputArray = arrayInput(elementValue, "a");
 		
-		
+	
 		//配列要素を挿入したいインデックスを入力させる
 		System.out.println("どこのインデックスに挿入しますか:");
 		int inputIndex = 0;
