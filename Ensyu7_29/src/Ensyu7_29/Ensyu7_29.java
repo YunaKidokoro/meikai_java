@@ -46,7 +46,7 @@ public class Ensyu7_29 {
 			//列のループ
 			for(int j=0; j<printArray[i].length; j++) {
 				//配列要素を表示する
-				System.out.printf("%3d",printArray[i][j]);
+				System.out.print("\t"+printArray[i][j]);
 			}
 			//次の行に移る前に改行をする。
 			System.out.println();
