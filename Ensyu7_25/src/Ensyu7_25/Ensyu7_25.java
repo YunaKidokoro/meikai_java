@@ -72,7 +72,7 @@ public class Ensyu7_25 {
 		for(int i=0; i < a.length-n ; i++) {
 			//削除後の配列に値を代入していく
 			removeArray[i] = a[j];
-			//aのインデックスが削除したいインデックになった場合
+			//aのインデックスが削除したいインデックスになった場合
 			if(j == idx) {
 				//次のループで削除後の配列で同じインデックスに値を代入する
 				i--;
@@ -136,21 +136,38 @@ public class Ensyu7_25 {
 		while(deleteIndex>elementValue-1 || deleteIndex<0);
 		
 		//削除したい配列要素の個数を表す変数を宣言
-		int howDeleteIndex = 0;
+		int howIndex = 0;
 		//削除する配列要素の個数の入力を促す文を表示
 		System.out.print("何個削除しますか：");
-		do{
-			//入力された値を読み込む
-			howDeleteIndex = inputNumber.nextInt();
-			//削除したいインデックス数が配列要素数以上の場合
-			if(deleteIndex+howDeleteIndex>inputArray.length-1 || howDeleteIndex<0) {
-				//再入力を求める表示
-				System.out.print("もう一度入力して下さい：");
+		//先頭が0の場合
+		if(deleteIndex == 0) {
+			//ループの開始
+			do{
+				//入力された値を読み込む
+				howIndex = inputNumber.nextInt();
+				//入力値が0以下、または、
+				if(howIndex<=0 || elementValue-1<howIndex) {
+					//再入力を求める表示
+					System.out.print("もう一度入力して下さい：");
+				}
 			}
+			//削除したいインデックス数が配列要素数以上なら繰り返す
+			while(howIndex<=0 || elementValue-1<howIndex);
 		}
-		//削除したいインデックス数が配列要素数以上なら繰り返す
-		while(deleteIndex+howDeleteIndex>inputArray.length-1 || howDeleteIndex<0);
+		//それ以外の場合
+		else {
+			do {
+				//入力された値を読み込む
+				howIndex = inputNumber.nextInt();
+				//削除したい個数の可能範囲から外れた場合
+				if( deleteIndex+howIndex > elementValue|| howIndex<=0) {
+					//再入力を求める表示
+					System.out.print("もう一度入力して下さい：");
+				}
+			//適当な値が入力されるまで繰り返す
+			}while(deleteIndex+howIndex > elementValue|| howIndex<=0);
+		}
 		//要素の削除された配列を表示する
-		printArray(arrayRmvOfN(inputArray,deleteIndex,howDeleteIndex),"a'");
+		printArray(arrayRmvOfN(inputArray,deleteIndex,howIndex),"a'");
 	}
 }
