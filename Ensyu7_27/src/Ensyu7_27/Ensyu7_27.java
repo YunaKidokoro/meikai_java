@@ -80,7 +80,7 @@ public class Ensyu7_27 {
 	 * 引数:int[][]型・ｘ・１つ目の行列
 	 * 		int[][]型・ｙ・２つ目の行列
 	 * 		int[][]型・ｚ・３つ目の行列
-	 * 戻り値:boolean型・answer・行列の要素数が等しければ正を返す
+	 * 戻り値:boolean型・backAnswer・行列の要素数が等しければ正を返す
 	 * 作成日:2023/04/20
 	 * */
 	static boolean addMatrix(int[][] x, int[][] y, int[][] z) {
@@ -161,7 +161,7 @@ public class Ensyu7_27 {
 		//配列cの列数を入力
 		int rowsC  = readInteger();
 		//各配列要素の入力
-		int [][]thirdArray = arrayInput2d(linesB, rowsB);		
+		int [][]thirdArray = arrayInput2d(linesC, rowsC);		
 		//配列bの表示
 		printArray2d(thirdArray);
 
