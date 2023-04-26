@@ -1,6 +1,6 @@
 package Ensyu7_32;
-//スキャナークラスをインポートする
-import java.util.Scanner;
+//ランダムクラスをインポートする
+import java.util.Random;
 /*
 * クラス名:Ensyu7_32
 * 概要:演習7-32
@@ -8,9 +8,8 @@ import java.util.Scanner;
 * 作成日:2023/04/25
 * */
 public class Ensyu7_32 {
-	//スキャナークラスのインスタンスを初期化する
-	static Scanner inputNumber = new Scanner(System.in);
-
+	//ランダムクラスのインスタンスを初期化する
+	static Random randomNumber = new Random();
 	/*
 	 * 関数名：printBits
 	 * 概要:int型整数の絶対値を返す
@@ -29,6 +28,9 @@ public class Ensyu7_32 {
 			//そうでなければ第iビットとして0を表示する
 			else{System.out.print('0');}
 		}
+		//改行する
+		System.out.println();
+
 	}
 
 
@@ -50,6 +52,9 @@ public class Ensyu7_32 {
 			//そうでなければ第iビットとして0を表示する
 			else{System.out.print('0');}
 		}
+		//改行する
+		System.out.println();
+
 	}
 	
 	/*
@@ -70,6 +75,9 @@ public class Ensyu7_32 {
 			//そうでなければ第iビットとして0を表示する
 			else{System.out.print('0');}
 		}
+		//改行する
+		System.out.println();
+
 	}
 	
 	/*
@@ -90,24 +98,8 @@ public class Ensyu7_32 {
 			//そうでなければ第iビットとして0を表示する
 			else{System.out.print('0');}
 		}
-	}
-	/*
-	 * 関数名:twoMultiplier
-	 * 概要:2のべき乗の計算をする
-	 * 引数:int型・putOnNumber・乗数を表す
-	 * 戻り値:int型・ResultNumber・2のputOnNumber乗を表す
-	 * 作成日:2023/04/20
-	 * */
-	static int twoMultiplier(int putOnNumber) {
-		//計算結果を表す変数
-		int ResultNumber = 1;
-			//putOnNumber回ループする
-			for(int i=0; i<putOnNumber ; i++) {
-			//2を書ける
-			ResultNumber *= 2;
-		}
-		//計算結果を表示
-		return ResultNumber;
+		//改行する
+		System.out.println();
 	}
 
 	/*
@@ -119,39 +111,45 @@ public class Ensyu7_32 {
 	 * 作成者:城所佑奈
 	 */
 	public static void main(String[]argd) {
-		//プログラムの説明文と共に入力を促す
-		System.out.print("入力した整数の内部ビットを表示します:");
-		//入力された値を読み込む
-		long inputFigure = inputNumber.nextLong();
+		//プログラムの説明文
+		System.out.println("ランダムな値を生成し内部ビットを表示します");
 		
-		//byte型の範囲内の場合
-		if(-128<inputFigure && inputFigure<127) {
-			//数値型が何かを表示しておく
-			System.out.println("byte型");
-			//整数の内部ビットを表示する
-			printBits((byte)inputFigure);
-		}
+		//byte型の整数の下限を表す変数
+		final int LOWER_LIMIT_BYTE = -128;
+		//byte型の整数の上限を表す変数
+		final int HIGHER_LIMIT_BYTE = 127;
+		//byte型の範囲内の乱数を生成
+		byte byteInteger = (byte) (randomNumber.nextInt(HIGHER_LIMIT_BYTE+LOWER_LIMIT_BYTE+2)+LOWER_LIMIT_BYTE);
 		
-		//short型の範囲内の場合
-		else if(-twoMultiplier(15)<inputFigure && inputFigure<(-1+twoMultiplier(15))) {
-			//数値型が何かを表示しておく
-			System.out.println("short型");
-			//整数の内部ビットを表示する
-			printBits((short)inputFigure);
-		}
-		//int型の範囲内の場合
-		else if(-twoMultiplier(31)<inputFigure && inputFigure<(-1+twoMultiplier(31))) {
-			//数値型が何かを表示しておく
-			System.out.println("int型");
-			//整数の内部ビットを表示する
-			printBits((int)inputFigure);
-		}
-		else {
-			//数値型が何かを表示しておく
-			System.out.println("long型");
-			//整数の内部ビットを表示する
-			printBits(inputFigure);
-		}
+		//数値型が何かを表示しておく
+		System.out.println("byte型");
+		//整数の内部ビットを表示する
+		printBits(byteInteger);
+		
+		//short型の整数の下限を表す変数
+		final int LOWER_LIMIT_SHORT = -32768;
+		//short型の整数の上限を表す変数
+		final int HIGHER_LIMIT_SHORT = 32767;
+		//short型の範囲内の乱数を生成
+		short shortInteger = (short) (randomNumber.nextInt(HIGHER_LIMIT_SHORT+LOWER_LIMIT_SHORT+2)+LOWER_LIMIT_SHORT);
+
+		//数値型が何かを表示しておく
+		System.out.println("short型");
+		//整数の内部ビットを表示する
+		printBits(shortInteger);
+		
+		//int型の範囲内の乱数を生成
+		int intInteger = randomNumber.nextInt();
+		//数値型が何かを表示しておく
+		System.out.println("int型");
+		//整数の内部ビットを表示する
+		printBits(intInteger);
+		
+		//long型の範囲内の乱数を生成
+		long longInteger = randomNumber.nextLong();
+		System.out.println("long型");
+		//整数の内部ビットを表示する
+		printBits(longInteger);
 		
 	}
 }
