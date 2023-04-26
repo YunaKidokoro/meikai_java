@@ -104,17 +104,24 @@ public class Ensyu7_31 {
 		int intInteger = randomNumber.nextInt();
 		//数値型が何か表示
 		System.out.println("int型");
+		//元の値を表示
+		System.out.println("元の値："+ intInteger);
 		//乱数の絶対値を表示
-		System.out.println(absolute(intInteger));
-		
+		System.out.println("絶対値：" + absolute(intInteger));
+		//見やすくするために改行する
+		System.out.println();
 		
 		//long型の範囲内の乱数を生成
 		long longInteger = randomNumber.nextLong();
 		//数値型が何か表示
 		System.out.println("long型");
+		//元の値を表示
+		System.out.println("元の値："+ longInteger);
 		//乱数の絶対値を表示
-		System.out.println(absolute(longInteger));
-		
+		System.out.println("絶対値：" + absolute(longInteger));
+		//見やすくするために改行する
+		System.out.println();
+
 		//float型で乱数を生成するときの下限を表す変数
 		final float LOWER_LIMIT = -10;
 		//float型で乱数を生成するときの上限を表す変数
@@ -123,9 +130,13 @@ public class Ensyu7_31 {
 		float floatInteger = randomNumber.nextFloat(LOWER_LIMIT+HIGHER_LIMIT+2)+LOWER_LIMIT;	
 		//数値型が何か表示
 		System.out.println("float型");
+		//元の値を表示
+		System.out.println("元の値："+ floatInteger);
 		//乱数の絶対値を表示
-		System.out.println(absolute(floatInteger));
-		
+		System.out.println("絶対値：" + absolute(floatInteger));
+		//見やすくするために改行する
+		System.out.println();
+
 		//float型で乱数を生成するときの下限を表す変数
 		final double LOWER_LIMIT_ = -10;
 		//float型で乱数を生成するときの上限を表す変数
@@ -134,8 +145,10 @@ public class Ensyu7_31 {
 		double doubleInteger = randomNumber.nextDouble(LOWER_LIMIT_+HIGHER_LIMIT_+2)+LOWER_LIMIT_;
 		//数値型が何か表示
 		System.out.println("double型");
-		//乱数の絶対値を表示
-		System.out.println(absolute(doubleInteger));
+		//元の値を表示
+		System.out.println("元の値："+ doubleInteger);
 
+		//乱数の絶対値を表示
+		System.out.println("絶対値：" + absolute(doubleInteger));
 	}
 }
