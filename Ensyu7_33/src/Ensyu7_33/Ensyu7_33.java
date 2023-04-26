@@ -84,7 +84,7 @@ class Ensyu7_33 {
 		//行のループ
 		for(int i=0; i < a.length ; i++) {
 			//配列要素を表示する
-			System.out.print("\t"+a[i]);
+			System.out.print("　"+a[i]);
 		}
 	}
 
