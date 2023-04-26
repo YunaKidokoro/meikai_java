@@ -119,35 +119,39 @@ public class Ensyu7_32 {
 		//byte型の整数の上限を表す変数
 		final int HIGHER_LIMIT_BYTE = 127;
 		//byte型の範囲内の乱数を生成
-		byte byteInteger = (byte) (randomNumber.nextInt(HIGHER_LIMIT_BYTE+LOWER_LIMIT_BYTE+2)+LOWER_LIMIT_BYTE);
-		
+		byte byteInteger = (byte) (randomNumber.nextInt(HIGHER_LIMIT_BYTE-LOWER_LIMIT_BYTE+2)+LOWER_LIMIT_BYTE);
 		//数値型が何かを表示しておく
-		System.out.println("byte型");
+		System.out.println("byte型:"+byteInteger);
 		//整数の内部ビットを表示する
 		printBits(byteInteger);
+		//見やすくするために改行する
+		System.out.println("");
 		
 		//short型の整数の下限を表す変数
 		final int LOWER_LIMIT_SHORT = -32768;
 		//short型の整数の上限を表す変数
 		final int HIGHER_LIMIT_SHORT = 32767;
 		//short型の範囲内の乱数を生成
-		short shortInteger = (short) (randomNumber.nextInt(HIGHER_LIMIT_SHORT+LOWER_LIMIT_SHORT+2)+LOWER_LIMIT_SHORT);
-
+		short shortInteger = (short) (randomNumber.nextInt(HIGHER_LIMIT_SHORT-LOWER_LIMIT_SHORT+2)+LOWER_LIMIT_SHORT);
 		//数値型が何かを表示しておく
-		System.out.println("short型");
+		System.out.println("short型:"+shortInteger);
 		//整数の内部ビットを表示する
 		printBits(shortInteger);
-		
+		//見やすくするために改行する
+		System.out.println("");
+
 		//int型の範囲内の乱数を生成
 		int intInteger = randomNumber.nextInt();
 		//数値型が何かを表示しておく
-		System.out.println("int型");
+		System.out.println("int型:"+intInteger);
 		//整数の内部ビットを表示する
 		printBits(intInteger);
-		
+		//見やすくするために改行する
+		System.out.println("");
+
 		//long型の範囲内の乱数を生成
 		long longInteger = randomNumber.nextLong();
-		System.out.println("long型");
+		System.out.println("long型:"+longInteger);
 		//整数の内部ビットを表示する
 		printBits(longInteger);
 		
