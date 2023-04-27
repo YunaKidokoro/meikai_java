@@ -5,7 +5,7 @@ package Ensyu8_1;
  * 作成日:2023/04/26
  * 作成者:城所佑奈
  * */
-class HumanClass{
+public class HumanClass{
 	//名前をインスタンス化
 	private String humanName;
 	//身長(cm)をインスタンス化
