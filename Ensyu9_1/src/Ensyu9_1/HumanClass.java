@@ -5,7 +5,7 @@ package Ensyu9_1;
  * 作成日:2023/04/26
  * 作成者:城所佑奈
  * */
-public class ReHumanClass{
+public class HumanClass{
 	//名前をインスタンス化
 	private String humanName;
 	//身長(cm)をインスタンス化
@@ -16,7 +16,7 @@ public class ReHumanClass{
 	private float bodyMassIndex;
 	
 	//コンストラクタ
-	ReHumanClass(String humanName, int heightValue, int weightValue, float bodyMassIndex ){
+	HumanClass(String humanName, int heightValue, int weightValue, float bodyMassIndex ){
 		//名前を表すフィールドを初期化する
 		this.humanName = humanName;
 		//身長を表すフィールドを初期化する

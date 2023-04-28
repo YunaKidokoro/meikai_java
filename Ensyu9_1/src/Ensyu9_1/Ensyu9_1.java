@@ -19,13 +19,13 @@ public class Ensyu9_1 {
 		//配列の生成時に要素を初期化する場合であることを表示
 		System.out.println("配列の生成時に要素を初期化");
 		//クラス型の配列を生成
-		ReHumanClass []humanArray = {
+		HumanClass []humanArray = {
 			//配列要素をインスタンスへの参照で初期化する
-			new ReHumanClass("yuna",160,50,0),
+			new HumanClass("yuna",160,50,0),
 			//配列要素をインスタンスへの参照で初期化する
-			new ReHumanClass("mama",150,45,0),
+			new HumanClass("mama",150,45,0),
 			//配列要素をインスタンスへの参照で初期化する
-			new ReHumanClass("papa",170,60,0),
+			new HumanClass("papa",170,60,0),
 		};
 		
 		//配列の要素数ぶんループ
@@ -47,16 +47,16 @@ public class Ensyu9_1 {
 		//配列の生成後に各要素にインスタンスの参照を代入する
 		System.out.println("配列の生成後に各要素にインスタンスの参照を代入");
 		//配列を生成する
-		ReHumanClass []arrayAfter ;
+		HumanClass []arrayAfter ;
 		
 		//配列の各要素にインスタンスの参照を代入していく
-		arrayAfter = new ReHumanClass[] {
+		arrayAfter = new HumanClass[] {
 			//インデックス0の配列要素に代入
-			new ReHumanClass("yuna",160,50,0),
+			new HumanClass("yuna",160,50,0),
 			//インデックス1の配列要素に代入
-			new ReHumanClass("mama",150,45,0),
+			new HumanClass("mama",150,45,0),
 			//インデックス2の配列要素に代入
-			new ReHumanClass("papa",170,60,0),};
+			new HumanClass("papa",170,60,0),};
 		
 		//配列の要素数ぶんループ
 		for(int i=0; i<humanArray.length; i++) {
