@@ -71,9 +71,9 @@ public class HumanClass{
 	 * 戻り値:float型・bodyMassIndex・BMI
 	 * 作成日:2023/04/26
 	 * */
-	float getBMI(int weight, int hight) {
+	float getBMI() {
 		//BMIを計算する(身長はm単位に直す)
-		bodyMassIndex = (weight*10000)/(hight*hight);
+		bodyMassIndex = (weightValue*10000)/(heightValue*heightValue);
 		//BMIを返す
 		return bodyMassIndex;
 	}
@@ -127,7 +127,7 @@ public class HumanClass{
 		String[] BMI = {"瘦せ型","普通体型","肥満度１","肥満度２","肥満度３","肥満度４"};
 		//文字列を返却
 		return String.format("名　前："+ getName() + "\n誕生日："+getBirthday() +"\n身　長："
-		+ getHeight()+"\n体　重："+ getWeight()+"\nＢＭⅠ："+ getBMI(getWeight(),getHeight())+
+		+ getHeight()+"\n体　重："+ getWeight()+"\nＢＭⅠ："+ getBMI()+
 		" "+BMI[passObesityRate(bodyMassIndex)]);
 	}
 	
