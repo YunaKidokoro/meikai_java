@@ -66,8 +66,7 @@ public class HumanClass{
 	/*
 	 * 関数名:getBMI
 	 * 概要:BMIを調べる
-	 * 引数:int型・weight・体重
-	 * 		int型・hight ・身長
+	 * 引数:なし
 	 * 戻り値:float型・bodyMassIndex・BMI
 	 * 作成日:2023/04/26
 	 * */
