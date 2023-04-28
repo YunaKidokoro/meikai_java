@@ -146,6 +146,12 @@ public class Ensyu9_2 {
 		//何年何月何日を渡してインスタンス化
 		Day outputDay4 = new Day (whatYear, whatMonth, whatDay);		
 		//インスタンスを表示
-		System.out.println("day4 = " + outputDay4);
+		System.out.println("day4= " + outputDay4);
+		
+		//インスタンスを渡してインスタンス化する
+		Day outputDay5 = new Day (outputDay4);
+		//インスタンスを表示する
+		System.out.println("day5= " + outputDay5);
+		
 	}
 }
