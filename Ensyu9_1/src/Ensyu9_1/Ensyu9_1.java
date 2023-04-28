@@ -31,7 +31,7 @@ public class Ensyu9_1 {
 		//配列の要素数ぶんループ
 		for(int i=0; i<humanArray.length; i++) {
 			//配列のインデックスを表示
-			System.out.println("x["+i+"]= " 
+			System.out.println( "x["+i+"]= " 
 			//名前を取得して表示
 			+ humanArray[i].getName() +", "
 			//身長を取得して表示
@@ -39,7 +39,7 @@ public class Ensyu9_1 {
 			//体重を取得して表示
 			+ humanArray[i].getWeight() + " kg, BMI="
 			//BMIを取得して表示
-			+ humanArray[i].getBMI( humanArray[i].getWeight(),humanArray[i].getHeight()));
+			+ humanArray[i].getBMI() );
 		}
 		//見やすくしたいので改行
 		System.out.println();
@@ -61,7 +61,7 @@ public class Ensyu9_1 {
 		//配列の要素数ぶんループ
 		for(int i=0; i<humanArray.length; i++) {
 			//配列のインデックスを表示
-			System.out.println("y["+i+"]= " 
+			System.out.println( "y["+i+"]= " 
 			//名前を取得して表示
 			+ arrayAfter[i].getName() +", "
 			//身長を取得して表示
@@ -69,7 +69,7 @@ public class Ensyu9_1 {
 			//体重を取得して表示
 			+ arrayAfter[i].getWeight() + " kg, BMI="
 			//BMIを取得して表示
-			+ arrayAfter[i].getBMI( arrayAfter[i].getWeight(),arrayAfter[i].getHeight()));
+			+ arrayAfter[i].getBMI() );
 		}
 	}
 }
