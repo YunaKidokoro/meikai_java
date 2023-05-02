@@ -78,10 +78,14 @@ public class MinMax {
 	 * 作成日:2023/5/1
 	 * */
 	static int max(int a, int b) {
+		//仮の最大値をaとする
 		int maximumNumber = a;
+		//bが仮の最大値よりも大きい場合
 		if(b>a) {
+			//最大値を更新する
 			maximumNumber = b;
 		}
+		//最大値を返す
 		return maximumNumber;
 	}
 	/*
