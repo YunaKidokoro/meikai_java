@@ -34,6 +34,7 @@ public class Ensyu9_5 {
 		//入力された日にちを変数に読み込む
 		inputDay = Day.inputWhatDay(inputYear, inputMonth);
 	}
+
 	/*
 	 * 関数名:main
 	 * 概　要:Periodクラスのテスト
@@ -49,15 +50,30 @@ public class Ensyu9_5 {
 		inputDate();
 		//入力された値を開始日のインスタンスに代入する
 		Day startDay= Period.getFrom(new Day(inputYear,inputMonth , inputDay));
+		
+		//入力された値を開始日の年月日を表す変数に代入する。
+		int beforeYear =  inputYear, beforeMonoth =  inputMonth, beforeDay = inputDay;
 		//終了日の入力を促す
 		System.out.println("終了日を入力してください。");
 		//年月日を入力させる
 		inputDate();
-		//入力された値を終了日のインスタンスに代入する
-		Day finishDay= Period.getFrom(new Day(inputYear,inputMonth , inputDay));
-		//開始日と終了日のインスタンスを用いて期間を表すインスタンスに代入する
-		Period period = new Period(startDay, finishDay);
-		//開始日と終了日を表示する
-		period.printPeriod();
+		//開始日が終了日よりも過去になっているか調べる
+		boolean compareAnswer = Day.compareDay(beforeYear,beforeMonoth, beforeDay,
+				inputYear,inputMonth , inputDay);
+		
+		//開始日が終了日よりも過去の場合
+		if(compareAnswer == true) {	
+			//入力された値を終了日のインスタンスに代入する
+			Day finishDay= Period.getFrom(new Day(inputYear,inputMonth , inputDay));
+			//開始日と終了日のインスタンスを用いて期間を表すインスタンスに代入する
+			Period period = new Period(startDay, finishDay);
+			//開始日と終了日を表示する
+			period.printPeriod();
+		}
+		//開始日が終了日よりも未来の場合
+		else {
+			//適切な日にちでなかったことを表示する
+			System.out.println("終了日が開始日よりも過去になってます");
+		}
 	}
 }

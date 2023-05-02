@@ -78,6 +78,5 @@ public class Period {
 		System.out.println("開始日:" + from);
 		//日付と、その日付が終了日を表すことを表示
 		System.out.println("終了日:" + to);
-	}
-	
+	}	
 }

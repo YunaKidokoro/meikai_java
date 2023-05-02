@@ -6,8 +6,10 @@ import java.util.Scanner;
  * 作成日:2023/04/27
  * 作成者:城所佑奈
  * */
-
 public class Day {
+	static int compareResult = 0;
+	static Scanner inputNumber = new Scanner(System.in);
+	
 	//各フィールドを初期化
 	//西暦何年かを表すフィールド
 	private int year = 1;
@@ -211,5 +213,84 @@ public class Day {
 			}
 			//入力された日付を返す
 			return whatDay;
+		}
+		/*
+		 * 関数名:compareYear
+		 * 概要:2つの日付の年を比較する
+		 * 引数:開始日と終了日の年
+		 * 戻り値:2つの年を比較して、
+		 * 		　正しい時系列なら０、反転してれば１,同じ年なら２を返す
+		 * 作成日:2023/5/2
+		 * */
+		public static int compareYear(int beforeYear, int afterYear){
+			
+			//未来のはずの年の方が過去の場合
+			if(beforeYear>afterYear) {
+				//戻り値を１にする
+				compareResult = 1;
+			}
+			//同じ年の場合
+			else if(beforeYear == afterYear) {
+				//戻り値を２にする
+				compareResult = 2;
+			}
+			//２つの日付が時間的に正しいかを数字に変えて返す
+			return compareResult;
+		}
+		/*
+		 * 関数名:compareMonth
+		 * 概要:2つの日付の月を比較する
+		 * 引数:開始日と終了日の年と月
+		 * 戻り値:正しい時系列なら０、反転してれば１,同じ年なら２を返す
+		 * 作成日:2023/5/2
+		 * */
+		public static int compareMonth(int beforeYear, int afterYear, 
+				int beforeMonth, int afterMonth){
+			
+			//同じ年のとき
+			if(compareYear(beforeYear,afterYear)==2) {
+				//未来のはずの月の方が過去の場合
+				if(beforeMonth>afterMonth) {
+					//戻り値を１にする
+					compareResult = 1;
+				}
+				//同じ月の場合
+				else if(beforeMonth == afterMonth) {
+					//戻り値を２にする
+					compareResult = 2;
+				}
+				else{
+				//未来のはずの月がちゃんと後の場合
+				compareResult = 0;}
+			}
+			//２つの日付が時間的に正しいかを数字に変えて返す
+			return compareResult;
+		}
+		/*
+		 * 関数名:compareDay
+		 * 概　要:2つの日付の日にちを比較する
+		 * 引　数:開始日と終了日の年月日
+		 * 戻り値:開始日の方が過去なら正を返す
+		 * 作成日:2023/5/2
+		 * */
+		public static boolean compareDay(int beforeYear,int beforeMonth,int beforeDay,
+				int afterYear,int afterMonth, int afterDay){
+			//判定結果を表す変数を宣言
+			boolean getAnswer = true;
+			//月が同じ場合
+			if(compareMonth(beforeYear,afterYear, beforeMonth,afterMonth)==2) {
+				//未来のはずの日にちが過去の場合
+				if(beforeDay > afterDay) {
+					//判定結果を１とする
+					compareResult = 1;
+				}
+			}
+			//開始日が終了日よりも未来の場合
+			if(compareResult == 1) {
+				//判定結果をfalseに変える
+				getAnswer = false;
+			}
+			//２つの日付が時間的に正しいか返す
+			return getAnswer;
 		}
 }
