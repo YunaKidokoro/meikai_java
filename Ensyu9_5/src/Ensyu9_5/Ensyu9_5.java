@@ -52,13 +52,13 @@ public class Ensyu9_5 {
 		Day startDay= Period.getFrom(new Day(inputYear,inputMonth , inputDay));
 		
 		//入力された値を開始日の年月日を表す変数に代入する。
-		int beforeYear =  inputYear, beforeMonoth =  inputMonth, beforeDay = inputDay;
+		int beforeYear =  inputYear, beforeMonth =  inputMonth, beforeDay = inputDay;
 		//終了日の入力を促す
 		System.out.println("終了日を入力してください。");
 		//年月日を入力させる
 		inputDate();
 		//開始日が終了日よりも過去になっているか調べる
-		boolean compareAnswer = Day.compareDay(beforeYear,beforeMonoth, beforeDay,
+		boolean compareAnswer = Day.compareDay(beforeYear,beforeMonth, beforeDay,
 				inputYear,inputMonth , inputDay);
 		
 		//開始日が終了日よりも過去の場合
