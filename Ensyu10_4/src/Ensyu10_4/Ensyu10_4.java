@@ -54,15 +54,18 @@ public class Ensyu10_4 {
 		inputDay3.compareDay(2023,5,1);
 		//コンソール画面を見やすくするために改行
 		System.out.println();
+		
+		//n日ずらす前の日付で新しいインスタンスを生成
+		Day inputDay4 = new Day(2023,5,9);
 		//インスタンスの日付の次の日を表示
-		inputDay1.printAfterDay();
+		inputDay4.printAfterDay();
 		//インスタンスの日付の5日後を表示する
-		inputDay1.printAfterDayN(5);
+		inputDay4.printAfterNDays(5365);
 		//見やすくするために改行
 		System.out.println();
 		//インスタンスの日付の前の日を表示
-		inputDay1.printBeforeDay();
+		inputDay4.printBeforeDay();
 		//インスタンスの日付の十日前を表示する
-		inputDay1.printBeforeDayN(10);
+		inputDay4.printBeforeNDays(365);
 	}
 }

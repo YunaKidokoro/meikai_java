@@ -306,11 +306,13 @@ public class Day {
 	}
 	//各月の日数を格納した配列(うるう年でない)
 	static int[] monthlyDays = {31,28,31,30,31,30,31,31,30,31,30,31};
-	
+	//各月の日数を格納した配列(うるう年)
+	static int[] monthlyDays_ = {31,29,31,30,31,30,31,31,30,31,30,31};
+
 	//元旦から数えた月末の経過日数を格納した配列（うるう年でない）
-	static int[] elapseArray = {31,59,90,120,150,181,212,243,273,304,334,365};
+	static int[] elapseArray = {31,59,90,120,150,181,212,241,271,304,334,365};
 	//元旦から数えた月末の経過日数を格納した配列（うるう年）
-	static int[] elapseArray_= {31,60,91,121,151,182,213,244,274,305,335,366};
+	static int[] elapseArray_= {31,60,91,121,151,182,213,244,274,303,335,366};
 
 	/*
 	 * 関数名:elapsedDay
@@ -335,8 +337,8 @@ public class Day {
 			//先月までの経過日数と今月の経過日数を加える
 			elapseDay =  elapseArray[month_-2]+day_;
 		}
-		//経過日数を返す
-		return elapseDay;
+		//経過日数を返す(今日を除く)
+		return elapseDay-1;
 	}
 	
 	/*
@@ -463,7 +465,7 @@ public class Day {
 		//うるう年の場合
 		if(isLeep(inputYear)==true) {
 			//指定した日付が月末の場合
-			if(elapseArray_[inputMonth-1] == elapseDay(inputYear,inputMonth,inputDate)) {
+			if(monthlyDays_[inputMonth-1] == inputDate) {
 				//12月の場合
 				if(inputMonth == 12) {
 					//来年にする
@@ -481,9 +483,14 @@ public class Day {
 					inputDate = 1;
 				}
 			}
+			//月末以外の日の場合
+			else {
+				//次の日にする
+				inputDate++;
+			}
 		}
 		//うるう年でない場合
-		else if(elapseArray[inputMonth-1] == elapseDay(inputYear,inputMonth,inputDate)) {
+		else if(monthlyDays[inputMonth-1] == inputDate) {
 			//12月の場合
 			if(inputMonth == 12) {
 				//来年にする
@@ -516,7 +523,7 @@ public class Day {
 		setDate(inputDate);
 	}
 	/*
-	 * 関数名:printBeforeDayN
+	 * 関数名:printAfterDay
 	 * 概　要:インスタンスの日付の次の日を表示する
 	 * 引　数:なし
 	 * 戻り値:なし
@@ -532,7 +539,7 @@ public class Day {
 	}
 
 	/*
-	 * 関数名:nextDay
+	 * 関数名:nextNDay
 	 * 概　要:インスタンスの日付のn日後を新にインスタンスに代入する
 	 * 引　数:int型・n・何日日付を進めるか
 	 * 戻り値:なし
@@ -552,7 +559,7 @@ public class Day {
 	 * 戻り値:なし
 	 * 作成日:2023/5/8
 	 * */
-	public void printAfterDayN(int n) {
+	public void printAfterNDays(int n) {
 		//もとの日付からどれだけずらすかを表示
 		System.out.printf("%2d年%2d月%2d日の%2d日後は\n",year,month,date, n);
 		//ずらした後の日付を取得
@@ -560,12 +567,6 @@ public class Day {
 		//ずらした後の日付を表示
 		System.out.printf("%2d年%2d月%2d日\n",year,month,date);
 	}
-	
-	
-	//元旦から数えた月初めの経過日数を格納した配列（うるう年でない）
-	static int[] earlyArray  = { 1,32,61, 92,122,152,183,214,245,275,306,336};
-	//元旦から数えた月初めの経過日数を格納した配列（うるう年でない）
-	static int[] earlyArray_  = {1,32,62, 93,123,153,184,215,246,276,307,337};
 	/*
 	 * 関数名:beforeDay
 	 * 概　要:インスタンスの日付の前の日を新にインスタンスに代入する
@@ -582,8 +583,7 @@ public class Day {
 		int inputDate = getDate();
 		
 		//指定した日付が月はじめの場合
-		if(earlyArray_[inputMonth-1] == elapseDay(inputYear,inputMonth,inputDate)
-				|| earlyArray[inputMonth-1] == elapseDay(inputYear,inputMonth,inputDate)) {
+		if(inputDate==1) {
 			//1月の場合
 			if(inputMonth == 1) {
 				//去年にする
@@ -594,7 +594,7 @@ public class Day {
 				inputDate =31;
 			}
 			//3月の場合
-			else if(inputMonth-1==2) {
+			else if(inputMonth==3) {
 				//前の月にする
 				inputMonth--;
 				//うるう年の場合
@@ -673,7 +673,7 @@ public class Day {
 	 * 戻り値:なし
 	 * 作成日:2023/5/8
 	 * */
-	public void printBeforeDayN(int n) {
+	public void printBeforeNDays(int n) {
 		//もとの日付からどれだけずらすかを表示
 		System.out.printf("%2d年%2d月%2d日の%2d日前は\n",year,month,date,n );
 		//ずらした後の日付を取得
