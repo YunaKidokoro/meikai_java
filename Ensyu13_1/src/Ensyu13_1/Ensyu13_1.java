@@ -8,6 +8,34 @@ import java.util.Scanner;
  * 作成者:yuna
  * */
 public class Ensyu13_1 {
+	//スキャナークラスのインスタンスを初期化する
+	static Scanner inputNumber = new Scanner(System.in);
+	/*
+	 * 関数名:inputPlusNumber
+	 * 概　要:正の値を入力させる
+	 * 引　数:何についての入力なのかを表す文字列
+	 * 戻り値:入力された値
+	 * 作成日:2023/5/9
+	 * */
+	public static int inputPlusNumber(String message) {
+		//入力された値を読み込む変数
+		int inputInteger = 0;
+		//ループの開始
+		do {
+			//何について入力させたいのかを表示する
+			System.out.println(message);
+			//入力された値を読み込む
+			inputInteger = inputNumber.nextInt();
+			//入力値が0以下の場合
+			if(inputInteger<=0) {
+				//再入力を求める文を表示する
+				System.out.println("もう一度入力して下さい。");
+			}
+		//入力値が0以下の場合は繰り返す
+		}while(inputInteger<=0);
+		//入力値を返却する
+		return inputInteger;
+	}
 	/*
 	 * 関数名:main
 	 * 概　要:図形クラス群のテストプログラム
@@ -18,19 +46,8 @@ public class Ensyu13_1 {
 	 * */
 	public static void main(String[]args) {
 		
-		//スキャナークラスのインスタンスを初期化する
-		Scanner inputNumber = new Scanner(System.in);
-		
-		//いくつ図形を表示するかを表す変数
-		int howMany =0;
-		//ループの開始
-		do {
-			//いくつ図形を表示させるかの入力を促す文を表示
-			System.out.print("図形は何個？:");
-			//入力された値を読み込む
-			howMany =  inputNumber.nextInt();
-		//入力が0以下の場合は繰り返す
-		}while(howMany<=0);
+		//いくつ図形を表示させるかを入力させて変数に値を読み込む
+		int howMany =  inputPlusNumber("図形は何個？:");
 		
 		//図形ごとのインスタンスを格納する配列を生成
 		Shape[] instanceArray = new Shape[howMany];
@@ -69,34 +86,26 @@ public class Ensyu13_1 {
 			}	
 			//入力されたのが水平直線の場合
 			if(inputShape==horizonNumber) {
-				//直線の長さの入力を促す文を表示
-				System.out.print("長さ：");
 				//入力された値を読み込む
-				int inputLength = inputNumber.nextInt();
+				int inputLength = inputPlusNumber("長さ：");
 				//HorzLineクラスのインスタンスを生成して格納
 				instanceArray[i] = new HorzLine(inputLength);
 				
 			}
 			//入力されたのが垂直直線の場合
 			if(inputShape==verticalNumber) {		
-				//直線の長さの入力を促す文を表示
-				System.out.print("長さ：");
 				//入力された値を読み込む
-				int inputLength = inputNumber.nextInt();
+				int inputLength = inputPlusNumber("長さ：");
 				//VirtLineクラスのインスタンスを生成して格納
 				instanceArray[i] = new VirtLine(inputLength);
 				
 			}
 			//入力されたのが長方形の場合
 			if(inputShape==rectangleNumber) {
-				//幅の長さの入力を促す文を表示
-				System.out.print("幅：");
-				//入力された値を読み込む
-				int inputWidth = inputNumber.nextInt();
-				//高さの入力を促す文を表示
-				System.out.print("高さ：");
-				//入力された値を読み込む
-				int inputHeight = inputNumber.nextInt();
+				//幅を入力させて値を読み込む
+				int inputWidth = inputPlusNumber("幅：");
+				//高さを入力させて値を読み込む
+				int inputHeight = inputPlusNumber("高さ：");
 				//Rectangleクラスのインスタンスを生成して格納
 				instanceArray[i] = new Rectangle(inputWidth,inputHeight);
 			}
