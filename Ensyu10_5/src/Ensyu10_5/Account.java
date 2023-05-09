@@ -7,7 +7,7 @@ package Ensyu10_5;
  * 作成者:yuna
  * */
 public class Account {
-	//
+	//識別番号をいくつ与えたかを表す変数
 	private static int counter = 0;
 	//フィールド
 	//口座名義を表すフィールド
@@ -21,6 +21,7 @@ public class Account {
 	
 	//インスタンス初期化子
 	{
+		//インスタンスが生成される度に以下のメッセージを表示する
 		System.out.println("明解銀行での口座開設ありがとうございます。");
 	}
 	
