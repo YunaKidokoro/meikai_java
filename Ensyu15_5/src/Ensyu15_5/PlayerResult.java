@@ -11,22 +11,22 @@ public class PlayerResult implements RockPaperScissorsRules  {
 	//人間プレイヤーのインスタンスを生成
 	HumanPlayer human = new HumanPlayer();
 	//コンピュータープレイヤー１のインスタンスを生成
-	CompPlayer compcompHand1 = new CompPlayer();
+	CompPlayer Hand1 = new CompPlayer();
 	//コンピュータープレイヤー２のインスタンスを生成
-	CompPlayer compcompHand2 = new CompPlayer();
+	CompPlayer Hand2 = new CompPlayer();
 	//人間プレイヤーの出す手を取得
 	int humanHand = human.getHumanHand();
 	//コンピュータープレイヤー１の出す手を取得
-	int compHand1 = compcompHand1.getComputerHand();
+	int compHand1 = Hand1.getComputerHand();
 	//コンピュータープレイヤー２の出す手を取得
-	int compHand2 = compcompHand2.getComputerHand();
+	int compHand2 = Hand2.getComputerHand();
 		
 	//グーの手を表す
-	final int HANDSTONE = 0;
+	final int HAND_STONE = 0;
 	//チョキの手を表す
-	int HANDSCISSORS = 1;
+	final int HAND_SCISSORS = 1;
 	//パーの手を表す
-	int HANDPAPER = 2;
+	final int HAND_PAPER = 2;
 	
 	/**
 	 * winPattern<br>  勝ったかどうか返却する
@@ -37,15 +37,18 @@ public class PlayerResult implements RockPaperScissorsRules  {
 		//勝ったかどうかを表す変数
 		boolean backResult = false;
 		//グーで勝つ
-		if(humanHand==HANDSTONE &&(compHand1 == HANDSCISSORS || compHand2 == HANDSCISSORS)) {
+		if(humanHand==HAND_STONE &&(compHand1 == HAND_SCISSORS || compHand2 == HAND_SCISSORS)) {
+			//trueを返却するようにする
 			backResult = true;
 		}
 		//チョキで勝つ
-		else if(humanHand==HANDSCISSORS &&(compHand1 == HANDPAPER || compHand2 == HANDPAPER)){
+		else if(humanHand==HAND_SCISSORS &&(compHand1 == HAND_PAPER || compHand2 == HAND_PAPER)){
+			//trueを返却するようにする
 			backResult = true;
 		}
 		//パーで勝つ
-		else if(humanHand==HANDPAPER &&(compHand1 == HANDSTONE || compHand2 == HANDSTONE)){
+		else if(humanHand==HAND_PAPER &&(compHand1 == HAND_STONE || compHand2 == HAND_STONE)){
+			//trueを返却するようにする
 			backResult = true;
 		}
 		//勝ったかどうか返却する
@@ -109,24 +112,24 @@ public class PlayerResult implements RockPaperScissorsRules  {
 		String backString1 = "";
 		
 		//出す手がグーのとき
-		if(humanHand == HANDSTONE){
+		if(humanHand == HAND_STONE){
 			//文字列をグーにする
 			backString1 = "あなた：グー";
 		}
 		//出す手がチョキのとき
-		else if(humanHand == HANDSCISSORS){
+		else if(humanHand == HAND_SCISSORS){
 			//文字列をチョキにする
 			backString1 = "あなた：チョキ";
 		}
 		//出す手がパーのとき
-		else if(humanHand == HANDPAPER){
+		else if(humanHand == HAND_PAPER){
 			//文字列をパーにする
 			backString1 = "あなた：パー";
 		}
 		//コンピュータープレイヤー１の出す手を取得する
-		String backString2 = compcompHand1.toString();
+		String backString2 = Hand1.toString();
 		//コンピュータープレイヤー2の出す手を取得する
-		String backString3 = compcompHand2.toString();
+		String backString3 = Hand2.toString();
 		
 		//出す手を表す文字列を返却する
 		return backString1+"\n"+backString2+"\n"+backString3;		

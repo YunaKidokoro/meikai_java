@@ -16,9 +16,9 @@ public class CompPlayer extends Player{
 	//コンストラクタ
 	public CompPlayer() {
 		//出す手の種類が3種類を表す変数
-		final int kindOfHands = 3;
+		final int kind_Of_Hands = 3;
 		//0から2の乱数を生成する
-		int  computerHand = randamNumber.nextInt(kindOfHands);
+		int  computerHand = randamNumber.nextInt(kind_Of_Hands);
 		//コンピューターの出す手を乱数で初期化する
 		this.computerHand = computerHand;
 	}
@@ -46,16 +46,16 @@ public class CompPlayer extends Player{
 		String compHands = "a";
 		
 		//出す手がグーのときを0とする
-		final int HANDSTONE = 0;
+		final int HAND_STONE = 0;
 		//出す手がチョキのときを1とする
-		int handScissors = 1;
+		int hand_Scissors = 1;
 		//出す手がグーのとき
-		if(computerHand == HANDSTONE) {
+		if(computerHand == HAND_STONE) {
 			//文字列をグーにする
 			compHands =  "コンピュータ：グー";
 		}
 		//出す手がチョキのとき
-		else if(computerHand == handScissors) {
+		else if(computerHand == hand_Scissors) {
 			//文字列をチョキにする
 			compHands = "コンピュータ：チョキ";
 		}

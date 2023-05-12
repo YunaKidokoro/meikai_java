@@ -50,7 +50,7 @@ public class Ensyu15_5 {
 		//じゃんけんをもう一度行うかどうかを表す変数
 		int retryNumber = 0;
 		//もう一度行う場合を表す変数
-		final int ONEMOREGAME = 1;
+		final int ONE_MORE_GAME = 1;
 		//ループの開始
 		do {
 			//かけごえを表示
@@ -66,6 +66,6 @@ public class Ensyu15_5 {
 			//見やすくするために改行する
 			System.out.println();
 		//１が入力されればもう一度行う
-		}while(retryNumber==ONEMOREGAME);
+		}while(retryNumber==ONE_MORE_GAME);
 	}
 }
