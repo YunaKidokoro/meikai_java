@@ -20,7 +20,7 @@ public class Ensyu15_2 {
 	    //文字列の入力を促す文を表示
 		System.out.print("文字列を入力して下さい：");
 		//入力された文字を変数に読み込む
-		String inputText = input.next();
+		String inputText = input.nextLine();
 		//文字列を一文字ずつchar型の配列に格納する
 		char[] inputTextArray = inputText.toCharArray();
 		
