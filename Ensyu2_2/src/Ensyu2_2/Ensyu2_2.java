@@ -16,23 +16,23 @@ public class Ensyu2_2 {
 	 * */
 	public static void main(String[]args) {
 		//変数１、２、３をint型で宣言。
-		int FirstInteger, SecondInteger, ThirdInteger;
+		int firstInteger, secondInteger, thirdInteger;
 		//変数１に10を代入。
-		FirstInteger = 10;
+		firstInteger = 10;
 		//変数２に20を代入。
-		SecondInteger = 20;
+		secondInteger = 20;
 		//変数３に30を代入。
-		ThirdInteger = 30;
+		thirdInteger = 30;
 		//標準出力ストリームを用いてそれぞれの表示を行う。
 		//変数１の値を表示。
-		System.out.println("変数1の値は"+FirstInteger+"です。");
+		System.out.println("変数1の値は"+firstInteger+"です。");
 		//変数２の値を表示。
-		System.out.println("変数2の値は"+SecondInteger+"です。");
+		System.out.println("変数2の値は"+secondInteger+"です。");
 		//変数３の値を表示。
-		System.out.println("変数3の値は"+ThirdIntenger+"です。");
+		System.out.println("変数3の値は"+thirdIntenger+"です。");
 		//３つの変数の合計値を表示。
-		System.out.println("合計は"+(FirstInteger+SecondInteger+ThirdInteger)+"です。");
+		System.out.println("合計は"+(firstInteger+secondInteger+thirdInteger)+"です。");
 		//３つの変数の平均を表示。
-		System.out.println("平均は"+(FirstInteger+SecondInteger+ThirdInteger)/3+"です。");
+		System.out.println("平均は"+(firstInteger+secondInteger+thirdInteger)/3+"です。");
 	}
 }
